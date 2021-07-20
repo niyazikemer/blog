@@ -1,1 +1,1 @@
-Sitemap: https://niyazikemer.com/blog/sitemap.xml
+Sitemap: https://niyazikemer.com/sitemap.xml
