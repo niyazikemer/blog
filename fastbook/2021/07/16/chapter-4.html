@@ -130,22 +130,29 @@ window.onload = wrap_img;
 </li>
 <li class="toc-entry toc-h2"><a href="#Baseline:-Pixel-similarity">Baseline: Pixel similarity </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#Stacking-Tensors">Stacking Tensors </a></li>
-<li class="toc-entry toc-h3"><a href="#To-create-an-array-or-tensor">To create an array or tensor </a></li>
-<li class="toc-entry toc-h3"><a href="#Validation-set">Validation set </a></li>
-<li class="toc-entry toc-h3"><a href="#a-3-and-mean3-comes-from-above">a-3 and mean3 comes from above </a></li>
-<li class="toc-entry toc-h3"><a href="#This-is-broadcasting:">This is broadcasting: </a>
+<li class="toc-entry toc-h3"><a href="#Training-Set:--Stacking-Tensors">Training Set:  Stacking Tensors </a></li>
+<li class="toc-entry toc-h3"><a href="#Mean-of-threes-and-sevens-out-ideal-3-and-7-for-baseline-study.">Mean of threes and sevens out ideal 3 and 7 for baseline study. </a></li>
+<li class="toc-entry toc-h3"><a href="#Distance-between-the-ideal-three-and-other-threes">Distance between the ideal three and other threes </a></li>
+<li class="toc-entry toc-h3"><a href="#Pytorch-L1-and-MSE-fuctions">Pytorch L1 and MSE fuctions </a></li>
+<li class="toc-entry toc-h3"><a href="#Array-and-Tensor-Examples">Array and Tensor Examples </a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#I-think-this-an-example-of-not-using-loops-which-slows-down-the-process-(check-above-important-tag)">I think this an example of not using loops which slows down the process (check above important tag) </a></li>
-<li class="toc-entry toc-h4"><a href="#here-is-another-example.-Shapes-don't-match.">here is another example. Shapes don&#39;t match. </a></li>
-<li class="toc-entry toc-h4"><a href="#here-is-an-another-broadcasting-for-all-validation-set:">here is an another broadcasting for all validation set: </a></li>
-<li class="toc-entry toc-h4"><a href="#Accuracy-of-our-'perfect-3-and-7'">Accuracy of our &#39;perfect 3 and 7&#39; </a></li>
+<li class="toc-entry toc-h4"><a href="#Splitting,-adding,-multiplying-tensors">Splitting, adding, multiplying tensors </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h3"><a href="#Stochastic-Gradient-Descent-(SGD)">Stochastic Gradient Descent (SGD) </a>
+<li class="toc-entry toc-h3"><a href="#Validation-set-:Stacking-Tensors">Validation set :Stacking Tensors </a></li>
+<li class="toc-entry toc-h3"><a href="#Manual-distance-function">Manual distance function </a></li>
+<li class="toc-entry toc-h3"><a href="#This-is-broadcasting:">This is broadcasting: </a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#Arthur-Samues-Machine-Learning-process:">Arthur Samues Machine Learning process: </a></li>
-<li class="toc-entry toc-h4"><a href="#GD-example">GD example </a></li>
+<li class="toc-entry toc-h4"><a href="#here-is-an-another-broadcasting-for-all-validation-set:">here is an another broadcasting for all validation set: </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#Accuracy-of-our-'ideal'-3-and-7">Accuracy of our &#39;ideal&#39; 3 and 7 </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Stochastic-Gradient-Descent-(SGD)">Stochastic Gradient Descent (SGD) </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#GD-example">GD example </a>
+<ul>
 <li class="toc-entry toc-h4"><a href="#How-to-calculate-gradient:">How to calculate gradient: </a></li>
 <li class="toc-entry toc-h4"><a href="#End-to-end-SGD-example">End to end SGD example </a></li>
 </ul>
@@ -183,21 +190,21 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p>
-<div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Note: </strong>’untar_data’ come from fastai library it downloads the data and untar it if it didn’t already and returns the destination folder.
-</div>
-
+<h3 id="What-untar-does?">
+<a class="anchor" href="#What-untar-does?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What untar does?<a class="anchor-link" href="#What-untar-does?"> </a>
+</h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="What-untar-does?">
-<a class="anchor" href="#What-untar-does?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What untar does?<a class="anchor-link" href="#What-untar-does?"> </a>
-</h3>
+<p></p>
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <strong>Note: </strong>’untar_data’ come from fastai library, it downloads the data and untar it if it didn’t already and returns the destination folder.
+</div>
+
 </div>
 </div>
 </div>
@@ -209,6 +216,23 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">untar_data</span><span class="p">(</span><span class="n">URLs</span><span class="o">.</span><span class="n">MNIST_SAMPLE</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">??</span>untar_data
 </pre></div>
 
     </div>
@@ -230,23 +254,6 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">??</span>untar_data
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -720,6 +727,14 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The 4:10 indicates we requested the rows from index 4 (included) to 10 (not included) and the same for the columns. NumPy indexes from top to bottom and left to right, so this section is located in the top-left corner of the image.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -782,7 +797,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The 4:10 indicates we requested the rows from index 4 (included) to 10 (not included) and the same for the columns. NumPy indexes from top to bottom and left to right, so this section is located in the top-left corner of the image. Here's the same thing as a PyTorch tensor:</p>
+<p>Here's the same thing as a PyTorch tensor:</p>
 
 </div>
 </div>
@@ -1363,7 +1378,7 @@ window.onload = wrap_img;
 <p></p>
 <div class="flash">
     <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Note: </strong>’sevens’ are still list of paths. ’o’ is a path in the list, then with the list comprehension we use the path to read the image, then cast the image into tensor.(Same for threes)
+    <strong>Note: </strong>’sevens’ are still list of paths. ’o’ is a path in the list, then with the list comprehension we use the path to read the image, then cast the image into tensor.(Same for threes). ’seven_tensor’ is a list of tensors
 </div>
 
 </div>
@@ -1472,8 +1487,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Stacking-Tensors">
-<a class="anchor" href="#Stacking-Tensors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stacking Tensors<a class="anchor-link" href="#Stacking-Tensors"> </a>
+<h3 id="Training-Set:--Stacking-Tensors">
+<a class="anchor" href="#Training-Set:--Stacking-Tensors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training Set:  Stacking Tensors<a class="anchor-link" href="#Training-Set:--Stacking-Tensors"> </a>
 </h3>
 </div>
 </div>
@@ -1714,6 +1729,15 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Mean-of-threes-and-sevens-out-ideal-3-and-7-for-baseline-study.">
+<a class="anchor" href="#Mean-of-threes-and-sevens-out-ideal-3-and-7-for-baseline-study." aria-hidden="true"><span class="octicon octicon-link"></span></a>Mean of threes and sevens out ideal 3 and 7 for baseline study.<a class="anchor-link" href="#Mean-of-threes-and-sevens-out-ideal-3-and-7-for-baseline-study."> </a>
+</h3>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1754,7 +1778,7 @@ window.onload = wrap_img;
 <p></p>
 <div class="flash">
     <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Note: </strong>This is the mean of the all tensors through first axis. ’Perfect three’
+    <strong>Note: </strong>This is the mean of the all tensors through first axis. ’Ideal Three’
 </div>
 
 </div>
@@ -1831,24 +1855,9 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p>
-<div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Note: </strong>Then we need to calculate the distance between the ’perfect’ and ordinary three.
-</div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p></p>
-<div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Note: </strong>two methods for getting the distance L1 Norm and MSE second one is panelize bigger mistake more havil, L1 is uniform.
-</div>
-
+<h3 id="Distance-between-the-ideal-three-and-other-threes">
+<a class="anchor" href="#Distance-between-the-ideal-three-and-other-threes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Distance between the ideal three and other threes<a class="anchor-link" href="#Distance-between-the-ideal-three-and-other-threes"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -1927,10 +1936,20 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Note: </strong>It is obvious that a_3 is closer to the perfect 3 so our approach worked at this time. (Both in L1 and MSE)
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <strong>Note: </strong>Then we need to calculate the distance between the ’ideal’ and ordinary three.Two methods for getting the distance <strong>L1 Norm</strong> and <strong>MSE</strong> second one is panelize bigger mistake more havil, L1 is uniform.
 </div>
+It is obvious that a_3 is closer to the perfect 3 so our approach worked at this time. (Both in L1 and MSE)
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Pytorch-L1-and-MSE-fuctions">
+<a class="anchor" href="#Pytorch-L1-and-MSE-fuctions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pytorch L1 and MSE fuctions<a class="anchor-link" href="#Pytorch-L1-and-MSE-fuctions"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -1972,8 +1991,8 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Note: </strong>Same available from Pytorch function torch.nn.functional as F ( for mse, manually take the sqrt)
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <strong>Note: </strong>torch.nn.functional as F (for mse, manually take the sqrt)
 </div>
 
 </div>
@@ -1994,8 +2013,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="To-create-an-array-or-tensor">
-<a class="anchor" href="#To-create-an-array-or-tensor" aria-hidden="true"><span class="octicon octicon-link"></span></a>To create an array or tensor<a class="anchor-link" href="#To-create-an-array-or-tensor"> </a>
+<h3 id="Array-and-Tensor-Examples">
+<a class="anchor" href="#Array-and-Tensor-Examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Array and Tensor Examples<a class="anchor-link" href="#Array-and-Tensor-Examples"> </a>
 </h3>
 </div>
 </div>
@@ -2087,6 +2106,15 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Splitting,-adding,-multiplying-tensors">
+<a class="anchor" href="#Splitting,-adding,-multiplying-tensors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Splitting, adding, multiplying tensors<a class="anchor-link" href="#Splitting,-adding,-multiplying-tensors"> </a>
+</h4>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -2257,8 +2285,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Validation-set">
-<a class="anchor" href="#Validation-set" aria-hidden="true"><span class="octicon octicon-link"></span></a>Validation set<a class="anchor-link" href="#Validation-set"> </a>
+<h3 id="Validation-set-:Stacking-Tensors">
+<a class="anchor" href="#Validation-set-:Stacking-Tensors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Validation set :Stacking Tensors<a class="anchor-link" href="#Validation-set-:Stacking-Tensors"> </a>
 </h3>
 </div>
 </div>
@@ -2305,8 +2333,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="a-3-and-mean3-comes-from-above">
-<a class="anchor" href="#a-3-and-mean3-comes-from-above" aria-hidden="true"><span class="octicon octicon-link"></span></a>a-3 and mean3 comes from above<a class="anchor-link" href="#a-3-and-mean3-comes-from-above"> </a>
+<h3 id="Manual-distance-function">
+<a class="anchor" href="#Manual-distance-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>Manual distance function<a class="anchor-link" href="#Manual-distance-function"> </a>
 </h3>
 </div>
 </div>
@@ -2354,15 +2382,6 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="I-think-this-an-example-of-not-using-loops-which-slows-down-the-process-(check-above-important-tag)">
-<a class="anchor" href="#I-think-this-an-example-of-not-using-loops-which-slows-down-the-process-(check-above-important-tag)" aria-hidden="true"><span class="octicon octicon-link"></span></a>I think this an example of not using loops which slows down the process (check above important tag)<a class="anchor-link" href="#I-think-this-an-example-of-not-using-loops-which-slows-down-the-process-(check-above-important-tag)"> </a>
-</h4>
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -2401,9 +2420,20 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="here-is-another-example.-Shapes-don't-match.">
-<a class="anchor" href="#here-is-another-example.-Shapes-don't-match." aria-hidden="true"><span class="octicon octicon-link"></span></a>here is another example. Shapes don't match.<a class="anchor-link" href="#here-is-another-example.-Shapes-don't-match."> </a>
-</h4>
+<p></p>
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <strong>Note: </strong>I think this an example of not using loops which slows down the process (check above important tag). Although shapes of the tensors don’t match, out function still works. Pytorch fills the gaps.
+</div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>here is another example. Shapes don't match.</strong></p>
+
 </div>
 </div>
 </div>
@@ -2568,9 +2598,9 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Accuracy-of-our-'perfect-3-and-7'">
-<a class="anchor" href="#Accuracy-of-our-'perfect-3-and-7'" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accuracy of our 'perfect 3 and 7'<a class="anchor-link" href="#Accuracy-of-our-'perfect-3-and-7'"> </a>
-</h4>
+<h3 id="Accuracy-of-our-'ideal'-3-and-7">
+<a class="anchor" href="#Accuracy-of-our-'ideal'-3-and-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accuracy of our 'ideal' 3 and 7<a class="anchor-link" href="#Accuracy-of-our-'ideal'-3-and-7"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -2613,18 +2643,17 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Stochastic-Gradient-Descent-(SGD)">
+<h2 id="Stochastic-Gradient-Descent-(SGD)">
 <a class="anchor" href="#Stochastic-Gradient-Descent-(SGD)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stochastic Gradient Descent (SGD)<a class="anchor-link" href="#Stochastic-Gradient-Descent-(SGD)"> </a>
-</h3>
+</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Arthur-Samues-Machine-Learning-process:">
-<a class="anchor" href="#Arthur-Samues-Machine-Learning-process:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Arthur Samues Machine Learning process:<a class="anchor-link" href="#Arthur-Samues-Machine-Learning-process:"> </a>
-</h4>
+<p><strong>Arthur Samues Machine Learning process:</strong></p>
+
 </div>
 </div>
 </div>
@@ -2757,9 +2786,9 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="GD-example">
+<h3 id="GD-example">
 <a class="anchor" href="#GD-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>GD example<a class="anchor-link" href="#GD-example"> </a>
-</h4>
+</h3>
 </div>
 </div>
 </div>
@@ -4524,7 +4553,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>The function <code>weights*pixels</code> won’t be flexible enough—it is always equal to 0 when the pixels are equal to 0 (i.e., its <em>intercept</em> is 0). You might remember from high school math that the formula for a line is <code>y=w*x+b</code>; we still need the <code>b</code>. We’ll initialize it to a random number too:
 </div>
 
