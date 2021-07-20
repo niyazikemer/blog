@@ -116,6 +116,21 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Exploring-the-dataset">Exploring the dataset </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#What-untar-does?">What untar does? </a></li>
+<li class="toc-entry toc-h3"><a href="#What-is-"path"?">What is &quot;path&quot;? </a></li>
+<li class="toc-entry toc-h3"><a href="#What-is-"!ls"">What is &quot;!ls&quot; </a></li>
+<li class="toc-entry toc-h3"><a href="#What-is-"tree"-?">What is &quot;tree&quot; ? </a></li>
+<li class="toc-entry toc-h3"><a href="#What-is-"ls()"-?">What is &quot;ls()&quot; ? </a></li>
+<li class="toc-entry toc-h3"><a href="#What-is-"PIL"-?-(Python-Image-Library)">What is &quot;PIL&quot; ? (Python Image Library) </a></li>
+<li class="toc-entry toc-h3"><a href="#NumPy-array">NumPy array </a></li>
+<li class="toc-entry toc-h3"><a href="#Pytorch-tensor">Pytorch tensor </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Baseline:-Pixel-similarity">Baseline: Pixel similarity </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Stacking-Tensors">Stacking Tensors </a></li>
 <li class="toc-entry toc-h3"><a href="#To-create-an-array-or-tensor">To create an array or tensor </a></li>
 <li class="toc-entry toc-h3"><a href="#Validation-set">Validation set </a></li>
 <li class="toc-entry toc-h3"><a href="#a-3-and-mean3-comes-from-above">a-3 and mean3 comes from above </a></li>
@@ -142,6 +157,8 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Why-we-need-a-loss-Function">Why we need a loss Function </a></li>
 <li class="toc-entry toc-h3"><a href="#Sigmoid">Sigmoid </a></li>
 <li class="toc-entry toc-h3"><a href="#What-are-SGD-and-Mini-Batches">What are SGD and Mini-Batches </a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#OPTIMIZER">OPTIMIZER </a></li>
 <li class="toc-entry toc-h2"><a href="#Adding-a-Nonlinearity">Adding a Nonlinearity </a></li>
 <li class="toc-entry toc-h2"><a href="#Going-Deeper">Going Deeper </a></li>
@@ -157,12 +174,30 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exploring-the-dataset">
+<a class="anchor" href="#Exploring-the-dataset" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exploring the dataset<a class="anchor-link" href="#Exploring-the-dataset"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
     <svg class="octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>’untar_data’ come from fastai library it downloads the data and untar it if it didn’t already and returns the destination folder.
 </div>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="What-untar-does?">
+<a class="anchor" href="#What-untar-does?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What untar does?<a class="anchor-link" href="#What-untar-does?"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -215,12 +250,9 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p>
-<div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Note: </strong>path returns:
-</div>
-
+<h3 id='What-is-"path"?'>
+<a class="anchor" href="#What-is-" path aria-hidden="true"><span class="octicon octicon-link"></span></a>What is "path"?<a class="anchor-link" href="#What-is-%22path%22?"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -261,9 +293,30 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
+<div class="flash flash-success">
+    <svg class="octicon octicon-checklist octicon octicon-checklist octicon octicon-checklist" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 1.75a.25.25 0 01.25-.25h8.5a.25.25 0 01.25.25v7.736a.75.75 0 101.5 0V1.75A1.75 1.75 0 0011.25 0h-8.5A1.75 1.75 0 001 1.75v11.5c0 .966.784 1.75 1.75 1.75h3.17a.75.75 0 000-1.5H2.75a.25.25 0 01-.25-.25V1.75zM4.75 4a.75.75 0 000 1.5h4.5a.75.75 0 000-1.5h-4.5zM4 7.75A.75.75 0 014.75 7h2a.75.75 0 010 1.5h-2A.75.75 0 014 7.75zm11.774 3.537a.75.75 0 00-1.048-1.074L10.7 14.145 9.281 12.72a.75.75 0 00-1.062 1.058l1.943 1.95a.75.75 0 001.055.008l4.557-4.45z"></path></svg>
+    <strong>Tip: </strong>what is inside the current folder? this where the jupyter notebook works. ’!’ at the beginning means the command works on the terminal.
+</div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id='What-is-"!ls"'>
+<a class="anchor" href="#What-is-" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is "!ls"<a class="anchor-link" href="#What-is-%22!ls%22"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Note: </strong>what is inside the current folder? this where the jupyter notebook works. ’!’ at the beginning means the command works on the terminal.
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <strong>Note: </strong><strong>ls works on the terminal. (-d for only listing directories)</strong>
 </div>
 
 </div>
@@ -289,20 +342,8 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>01_intro.ipynb		 15_arch_details.ipynb	     LICENSE
-02_production.ipynb	 16_accel_sgd.ipynb	     README_bn.md
-03_ethics.ipynb		 17_foundations.ipynb	     README_es.md
-04_mnist_basics.ipynb	 18_CAM.ipynb		     README_id.md
-05_pet_breeds.ipynb	 19_learner.ipynb	     README_ko.md
-06_multicat.ipynb	 2021-07-15-chapter-4.ipynb  README.md
-07_sizing_and_tta.ipynb  2021-07-15-Test.ipynb	     README_zh.md
-08_collab.ipynb		 20_conclusion.ipynb	     requirements.txt
-09_tabular.ipynb	 app_blog.ipynb		     sandbox
-10_nlp.ipynb		 app_jupyter.ipynb	     settings.ini
-11_midlevel_data.ipynb	 clean			     tools
-12_nlp_dive.ipynb	 CODE_OF_CONDUCT.md	     utils.py
-13_convolutions.ipynb	 environment.yml
-14_resnet.ipynb		 images
+<pre>2020-02-20-test.ipynb	    ghtop_images  my_icons
+2021-07-16-chapter-4.ipynb  images	  README.md
 </pre>
 </div>
 </div>
@@ -316,11 +357,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p>
-<div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Note: </strong>can be used like this too.
-</div>
+<p><strong>can be used like this too.</strong></p>
 
 </div>
 </div>
@@ -359,11 +396,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p>
-<div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Note: </strong>also like this:
-</div>
+<p><strong>also like this:</strong></p>
 
 </div>
 </div>
@@ -402,10 +435,19 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id='What-is-"tree"-?'>
+<a class="anchor" href="#What-is-" tree aria-hidden="true"><span class="octicon octicon-link"></span></a>What is "tree" ?<a class="anchor-link" href="#What-is-%22tree%22-?"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Note: </strong>getting the tree view also possible:
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <strong>Note: </strong><strong>for seeing tree sturucture of the files and folders (-d argument for directories)</strong>
 </div>
 
 </div>
@@ -453,60 +495,18 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p>
-<div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Note: </strong>only Directories -d:
-</div>
-
+<h3 id='What-is-"ls()"-?'>
+<a class="anchor" href="#What-is-" ls aria-hidden="true"><span class="octicon octicon-link"></span></a>What is "ls()" ?<a class="anchor-link" href="#What-is-%22ls()%22-?"> </a>
+</h3>
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>tree /home/niyazi/.fastai/data/mnist_sample/ -d
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre><span class="ansi-blue-intense-fg ansi-bold">/home/niyazi/.fastai/data/mnist_sample/</span>
-├── <span class="ansi-blue-intense-fg ansi-bold">train</span>
-│   ├── <span class="ansi-blue-intense-fg ansi-bold">3</span>
-│   └── <span class="ansi-blue-intense-fg ansi-bold">7</span>
-└── <span class="ansi-blue-intense-fg ansi-bold">valid</span>
-    ├── <span class="ansi-blue-intense-fg ansi-bold">3</span>
-    └── <span class="ansi-blue-intense-fg ansi-bold">7</span>
-
-6 directories
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>’ls’ is method by fastai similiar the Python’s list fuction but more powerful.
 </div>
 
@@ -551,7 +551,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>Check this usage:
 </div>
 
@@ -629,7 +629,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>there are  two folders under training folder
 </div>
 
@@ -659,10 +659,19 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>this code returns and ordered list of paths
 </div>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id='What-is-"PIL"-?-(Python-Image-Library)'>
+<a class="anchor" href="#What-is-" pil aria-hidden="true"><span class="octicon octicon-link"></span></a>What is "PIL" ? (Python Image Library)<a class="anchor-link" href="#What-is-%22PIL%22-?-(Python-Image-Library)"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -705,12 +714,9 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p>
-<div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Note: </strong>’Image’ class id from The Python Imaging Library (PIL)
-</div>
-
+<h3 id="NumPy-array">
+<a class="anchor" href="#NumPy-array" aria-hidden="true"><span class="octicon octicon-link"></span></a>NumPy array<a class="anchor-link" href="#NumPy-array"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -757,10 +763,19 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>this is how it looks  some part of the image in the NumPy array
 </div>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Pytorch-tensor">
+<a class="anchor" href="#Pytorch-tensor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pytorch tensor<a class="anchor-link" href="#Pytorch-tensor"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -815,7 +830,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>It is possible to convert it to a tansor as well.
 </div>
 
@@ -846,445 +861,445 @@ window.onload = wrap_img;
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style type="text/css">
-#T_38fd4_row0_col0,#T_38fd4_row0_col1,#T_38fd4_row0_col2,#T_38fd4_row0_col3,#T_38fd4_row0_col4,#T_38fd4_row0_col5,#T_38fd4_row0_col6,#T_38fd4_row0_col7,#T_38fd4_row0_col8,#T_38fd4_row0_col9,#T_38fd4_row0_col10,#T_38fd4_row0_col11,#T_38fd4_row0_col12,#T_38fd4_row0_col13,#T_38fd4_row0_col14,#T_38fd4_row0_col15,#T_38fd4_row0_col16,#T_38fd4_row0_col17,#T_38fd4_row1_col0,#T_38fd4_row1_col1,#T_38fd4_row1_col2,#T_38fd4_row1_col3,#T_38fd4_row1_col4,#T_38fd4_row1_col15,#T_38fd4_row1_col16,#T_38fd4_row1_col17,#T_38fd4_row2_col0,#T_38fd4_row2_col1,#T_38fd4_row2_col2,#T_38fd4_row2_col15,#T_38fd4_row2_col16,#T_38fd4_row2_col17,#T_38fd4_row3_col0,#T_38fd4_row3_col15,#T_38fd4_row3_col16,#T_38fd4_row3_col17,#T_38fd4_row4_col0,#T_38fd4_row4_col6,#T_38fd4_row4_col7,#T_38fd4_row4_col8,#T_38fd4_row4_col9,#T_38fd4_row4_col10,#T_38fd4_row4_col15,#T_38fd4_row4_col16,#T_38fd4_row4_col17,#T_38fd4_row5_col0,#T_38fd4_row5_col5,#T_38fd4_row5_col6,#T_38fd4_row5_col7,#T_38fd4_row5_col8,#T_38fd4_row5_col9,#T_38fd4_row5_col15,#T_38fd4_row5_col16,#T_38fd4_row5_col17,#T_38fd4_row6_col0,#T_38fd4_row6_col1,#T_38fd4_row6_col2,#T_38fd4_row6_col3,#T_38fd4_row6_col4,#T_38fd4_row6_col5,#T_38fd4_row6_col6,#T_38fd4_row6_col7,#T_38fd4_row6_col8,#T_38fd4_row6_col9,#T_38fd4_row6_col14,#T_38fd4_row6_col15,#T_38fd4_row6_col16,#T_38fd4_row6_col17,#T_38fd4_row7_col0,#T_38fd4_row7_col1,#T_38fd4_row7_col2,#T_38fd4_row7_col3,#T_38fd4_row7_col4,#T_38fd4_row7_col5,#T_38fd4_row7_col6,#T_38fd4_row7_col13,#T_38fd4_row7_col14,#T_38fd4_row7_col15,#T_38fd4_row7_col16,#T_38fd4_row7_col17,#T_38fd4_row8_col0,#T_38fd4_row8_col1,#T_38fd4_row8_col2,#T_38fd4_row8_col3,#T_38fd4_row8_col4,#T_38fd4_row8_col13,#T_38fd4_row8_col14,#T_38fd4_row8_col15,#T_38fd4_row8_col16,#T_38fd4_row8_col17,#T_38fd4_row9_col0,#T_38fd4_row9_col1,#T_38fd4_row9_col2,#T_38fd4_row9_col3,#T_38fd4_row9_col4,#T_38fd4_row9_col16,#T_38fd4_row9_col17,#T_38fd4_row10_col0,#T_38fd4_row10_col1,#T_38fd4_row10_col2,#T_38fd4_row10_col3,#T_38fd4_row10_col4,#T_38fd4_row10_col5,#T_38fd4_row10_col6,#T_38fd4_row10_col17{
+#T_1fc56_row0_col0,#T_1fc56_row0_col1,#T_1fc56_row0_col2,#T_1fc56_row0_col3,#T_1fc56_row0_col4,#T_1fc56_row0_col5,#T_1fc56_row0_col6,#T_1fc56_row0_col7,#T_1fc56_row0_col8,#T_1fc56_row0_col9,#T_1fc56_row0_col10,#T_1fc56_row0_col11,#T_1fc56_row0_col12,#T_1fc56_row0_col13,#T_1fc56_row0_col14,#T_1fc56_row0_col15,#T_1fc56_row0_col16,#T_1fc56_row0_col17,#T_1fc56_row1_col0,#T_1fc56_row1_col1,#T_1fc56_row1_col2,#T_1fc56_row1_col3,#T_1fc56_row1_col4,#T_1fc56_row1_col15,#T_1fc56_row1_col16,#T_1fc56_row1_col17,#T_1fc56_row2_col0,#T_1fc56_row2_col1,#T_1fc56_row2_col2,#T_1fc56_row2_col15,#T_1fc56_row2_col16,#T_1fc56_row2_col17,#T_1fc56_row3_col0,#T_1fc56_row3_col15,#T_1fc56_row3_col16,#T_1fc56_row3_col17,#T_1fc56_row4_col0,#T_1fc56_row4_col6,#T_1fc56_row4_col7,#T_1fc56_row4_col8,#T_1fc56_row4_col9,#T_1fc56_row4_col10,#T_1fc56_row4_col15,#T_1fc56_row4_col16,#T_1fc56_row4_col17,#T_1fc56_row5_col0,#T_1fc56_row5_col5,#T_1fc56_row5_col6,#T_1fc56_row5_col7,#T_1fc56_row5_col8,#T_1fc56_row5_col9,#T_1fc56_row5_col15,#T_1fc56_row5_col16,#T_1fc56_row5_col17,#T_1fc56_row6_col0,#T_1fc56_row6_col1,#T_1fc56_row6_col2,#T_1fc56_row6_col3,#T_1fc56_row6_col4,#T_1fc56_row6_col5,#T_1fc56_row6_col6,#T_1fc56_row6_col7,#T_1fc56_row6_col8,#T_1fc56_row6_col9,#T_1fc56_row6_col14,#T_1fc56_row6_col15,#T_1fc56_row6_col16,#T_1fc56_row6_col17,#T_1fc56_row7_col0,#T_1fc56_row7_col1,#T_1fc56_row7_col2,#T_1fc56_row7_col3,#T_1fc56_row7_col4,#T_1fc56_row7_col5,#T_1fc56_row7_col6,#T_1fc56_row7_col13,#T_1fc56_row7_col14,#T_1fc56_row7_col15,#T_1fc56_row7_col16,#T_1fc56_row7_col17,#T_1fc56_row8_col0,#T_1fc56_row8_col1,#T_1fc56_row8_col2,#T_1fc56_row8_col3,#T_1fc56_row8_col4,#T_1fc56_row8_col13,#T_1fc56_row8_col14,#T_1fc56_row8_col15,#T_1fc56_row8_col16,#T_1fc56_row8_col17,#T_1fc56_row9_col0,#T_1fc56_row9_col1,#T_1fc56_row9_col2,#T_1fc56_row9_col3,#T_1fc56_row9_col4,#T_1fc56_row9_col16,#T_1fc56_row9_col17,#T_1fc56_row10_col0,#T_1fc56_row10_col1,#T_1fc56_row10_col2,#T_1fc56_row10_col3,#T_1fc56_row10_col4,#T_1fc56_row10_col5,#T_1fc56_row10_col6,#T_1fc56_row10_col17{
             font-size:  6pt;
             background-color:  #fff7ec;
             color:  #000000;
-        }#T_38fd4_row1_col5{
+        }#T_1fc56_row1_col5{
             font-size:  6pt;
             background-color:  #fee7c7;
             color:  #000000;
-        }#T_38fd4_row1_col6,#T_38fd4_row1_col13{
+        }#T_1fc56_row1_col6,#T_1fc56_row1_col13{
             font-size:  6pt;
             background-color:  #f2704c;
             color:  #000000;
-        }#T_38fd4_row1_col7{
+        }#T_1fc56_row1_col7{
             font-size:  6pt;
             background-color:  #d12719;
             color:  #f1f1f1;
-        }#T_38fd4_row1_col8,#T_38fd4_row1_col9,#T_38fd4_row1_col10,#T_38fd4_row2_col5,#T_38fd4_row2_col6,#T_38fd4_row2_col7,#T_38fd4_row2_col11,#T_38fd4_row2_col12,#T_38fd4_row2_col13,#T_38fd4_row3_col4,#T_38fd4_row3_col12,#T_38fd4_row3_col13,#T_38fd4_row4_col1,#T_38fd4_row4_col2,#T_38fd4_row4_col3,#T_38fd4_row4_col12,#T_38fd4_row4_col13,#T_38fd4_row5_col12,#T_38fd4_row6_col11,#T_38fd4_row9_col11,#T_38fd4_row10_col11,#T_38fd4_row10_col12,#T_38fd4_row10_col13,#T_38fd4_row10_col14,#T_38fd4_row10_col15,#T_38fd4_row10_col16{
+        }#T_1fc56_row1_col8,#T_1fc56_row1_col9,#T_1fc56_row1_col10,#T_1fc56_row2_col5,#T_1fc56_row2_col6,#T_1fc56_row2_col7,#T_1fc56_row2_col11,#T_1fc56_row2_col12,#T_1fc56_row2_col13,#T_1fc56_row3_col4,#T_1fc56_row3_col12,#T_1fc56_row3_col13,#T_1fc56_row4_col1,#T_1fc56_row4_col2,#T_1fc56_row4_col3,#T_1fc56_row4_col12,#T_1fc56_row4_col13,#T_1fc56_row5_col12,#T_1fc56_row6_col11,#T_1fc56_row9_col11,#T_1fc56_row10_col11,#T_1fc56_row10_col12,#T_1fc56_row10_col13,#T_1fc56_row10_col14,#T_1fc56_row10_col15,#T_1fc56_row10_col16{
             font-size:  6pt;
             background-color:  #7f0000;
             color:  #f1f1f1;
-        }#T_38fd4_row1_col11{
+        }#T_1fc56_row1_col11{
             font-size:  6pt;
             background-color:  #e14630;
             color:  #f1f1f1;
-        }#T_38fd4_row1_col12{
+        }#T_1fc56_row1_col12{
             font-size:  6pt;
             background-color:  #d32a1b;
             color:  #f1f1f1;
-        }#T_38fd4_row1_col14{
+        }#T_1fc56_row1_col14{
             font-size:  6pt;
             background-color:  #fdb982;
             color:  #000000;
-        }#T_38fd4_row2_col3{
+        }#T_1fc56_row2_col3{
             font-size:  6pt;
             background-color:  #fddeb3;
             color:  #000000;
-        }#T_38fd4_row2_col4,#T_38fd4_row8_col6{
+        }#T_1fc56_row2_col4,#T_1fc56_row8_col6{
             font-size:  6pt;
             background-color:  #e9583e;
             color:  #000000;
-        }#T_38fd4_row2_col8,#T_38fd4_row2_col14,#T_38fd4_row3_col14{
+        }#T_1fc56_row2_col8,#T_1fc56_row2_col14,#T_1fc56_row3_col14{
             font-size:  6pt;
             background-color:  #a00000;
             color:  #f1f1f1;
-        }#T_38fd4_row2_col9,#T_38fd4_row3_col11{
+        }#T_1fc56_row2_col9,#T_1fc56_row3_col11{
             font-size:  6pt;
             background-color:  #d2291a;
             color:  #f1f1f1;
-        }#T_38fd4_row2_col10,#T_38fd4_row7_col10,#T_38fd4_row8_col8,#T_38fd4_row8_col10,#T_38fd4_row9_col8,#T_38fd4_row9_col10{
+        }#T_1fc56_row2_col10,#T_1fc56_row7_col10,#T_1fc56_row8_col8,#T_1fc56_row8_col10,#T_1fc56_row9_col8,#T_1fc56_row9_col10{
             font-size:  6pt;
             background-color:  #810000;
             color:  #f1f1f1;
-        }#T_38fd4_row3_col1{
+        }#T_1fc56_row3_col1{
             font-size:  6pt;
             background-color:  #b40201;
             color:  #f1f1f1;
-        }#T_38fd4_row3_col2{
+        }#T_1fc56_row3_col2{
             font-size:  6pt;
             background-color:  #8e0000;
             color:  #f1f1f1;
-        }#T_38fd4_row3_col3{
+        }#T_1fc56_row3_col3{
             font-size:  6pt;
             background-color:  #860000;
             color:  #f1f1f1;
-        }#T_38fd4_row3_col5{
+        }#T_1fc56_row3_col5{
             font-size:  6pt;
             background-color:  #be0f0a;
             color:  #f1f1f1;
-        }#T_38fd4_row3_col6{
+        }#T_1fc56_row3_col6{
             font-size:  6pt;
             background-color:  #fedfb5;
             color:  #000000;
-        }#T_38fd4_row3_col7,#T_38fd4_row3_col10{
+        }#T_1fc56_row3_col7,#T_1fc56_row3_col10{
             font-size:  6pt;
             background-color:  #fff2e1;
             color:  #000000;
-        }#T_38fd4_row3_col8{
+        }#T_1fc56_row3_col8{
             font-size:  6pt;
             background-color:  #fff3e3;
             color:  #000000;
-        }#T_38fd4_row3_col9{
+        }#T_1fc56_row3_col9{
             font-size:  6pt;
             background-color:  #fff5e7;
             color:  #000000;
-        }#T_38fd4_row4_col4{
+        }#T_1fc56_row4_col4{
             font-size:  6pt;
             background-color:  #a50000;
             color:  #f1f1f1;
-        }#T_38fd4_row4_col5{
+        }#T_1fc56_row4_col5{
             font-size:  6pt;
             background-color:  #fddaab;
             color:  #000000;
-        }#T_38fd4_row4_col11{
+        }#T_1fc56_row4_col11{
             font-size:  6pt;
             background-color:  #d42c1c;
             color:  #f1f1f1;
-        }#T_38fd4_row4_col14{
+        }#T_1fc56_row4_col14{
             font-size:  6pt;
             background-color:  #f06849;
             color:  #000000;
-        }#T_38fd4_row5_col1{
+        }#T_1fc56_row5_col1{
             font-size:  6pt;
             background-color:  #fff4e4;
             color:  #000000;
-        }#T_38fd4_row5_col2,#T_38fd4_row5_col3{
+        }#T_1fc56_row5_col2,#T_1fc56_row5_col3{
             font-size:  6pt;
             background-color:  #feeed5;
             color:  #000000;
-        }#T_38fd4_row5_col4{
+        }#T_1fc56_row5_col4{
             font-size:  6pt;
             background-color:  #fff0db;
             color:  #000000;
-        }#T_38fd4_row5_col10,#T_38fd4_row10_col7{
+        }#T_1fc56_row5_col10,#T_1fc56_row10_col7{
             font-size:  6pt;
             background-color:  #fee1b9;
             color:  #000000;
-        }#T_38fd4_row5_col11{
+        }#T_1fc56_row5_col11{
             font-size:  6pt;
             background-color:  #ae0000;
             color:  #f1f1f1;
-        }#T_38fd4_row5_col13,#T_38fd4_row6_col12{
+        }#T_1fc56_row5_col13,#T_1fc56_row6_col12{
             font-size:  6pt;
             background-color:  #8c0000;
             color:  #f1f1f1;
-        }#T_38fd4_row5_col14{
+        }#T_1fc56_row5_col14{
             font-size:  6pt;
             background-color:  #fdcc96;
             color:  #000000;
-        }#T_38fd4_row6_col10,#T_38fd4_row7_col11,#T_38fd4_row9_col6{
+        }#T_1fc56_row6_col10,#T_1fc56_row7_col11,#T_1fc56_row9_col6{
             font-size:  6pt;
             background-color:  #870000;
             color:  #f1f1f1;
-        }#T_38fd4_row6_col13{
+        }#T_1fc56_row6_col13{
             font-size:  6pt;
             background-color:  #fc8e5a;
             color:  #000000;
-        }#T_38fd4_row7_col7{
+        }#T_1fc56_row7_col7{
             font-size:  6pt;
             background-color:  #fff0dc;
             color:  #000000;
-        }#T_38fd4_row7_col8{
+        }#T_1fc56_row7_col8{
             font-size:  6pt;
             background-color:  #fdb37d;
             color:  #000000;
-        }#T_38fd4_row7_col9{
+        }#T_1fc56_row7_col9{
             font-size:  6pt;
             background-color:  #b30000;
             color:  #f1f1f1;
-        }#T_38fd4_row7_col12{
+        }#T_1fc56_row7_col12{
             font-size:  6pt;
             background-color:  #fc915c;
             color:  #000000;
-        }#T_38fd4_row8_col5{
+        }#T_1fc56_row8_col5{
             font-size:  6pt;
             background-color:  #fff1de;
             color:  #000000;
-        }#T_38fd4_row8_col7{
+        }#T_1fc56_row8_col7{
             font-size:  6pt;
             background-color:  #960000;
             color:  #f1f1f1;
-        }#T_38fd4_row8_col9,#T_38fd4_row9_col9{
+        }#T_1fc56_row8_col9,#T_1fc56_row9_col9{
             font-size:  6pt;
             background-color:  #820000;
             color:  #f1f1f1;
-        }#T_38fd4_row8_col11{
+        }#T_1fc56_row8_col11{
             font-size:  6pt;
             background-color:  #d93422;
             color:  #f1f1f1;
-        }#T_38fd4_row8_col12{
+        }#T_1fc56_row8_col12{
             font-size:  6pt;
             background-color:  #fee9ca;
             color:  #000000;
-        }#T_38fd4_row9_col5{
+        }#T_1fc56_row9_col5{
             font-size:  6pt;
             background-color:  #feefd8;
             color:  #000000;
-        }#T_38fd4_row9_col7{
+        }#T_1fc56_row9_col7{
             font-size:  6pt;
             background-color:  #840000;
             color:  #f1f1f1;
-        }#T_38fd4_row9_col12{
+        }#T_1fc56_row9_col12{
             font-size:  6pt;
             background-color:  #a10000;
             color:  #f1f1f1;
-        }#T_38fd4_row9_col13{
+        }#T_1fc56_row9_col13{
             font-size:  6pt;
             background-color:  #bc0c08;
             color:  #f1f1f1;
-        }#T_38fd4_row9_col14{
+        }#T_1fc56_row9_col14{
             font-size:  6pt;
             background-color:  #fca36e;
             color:  #000000;
-        }#T_38fd4_row9_col15{
+        }#T_1fc56_row9_col15{
             font-size:  6pt;
             background-color:  #fff6ea;
             color:  #000000;
-        }#T_38fd4_row10_col8,#T_38fd4_row10_col9{
+        }#T_1fc56_row10_col8,#T_1fc56_row10_col9{
             font-size:  6pt;
             background-color:  #fdb881;
             color:  #000000;
-        }#T_38fd4_row10_col10{
+        }#T_1fc56_row10_col10{
             font-size:  6pt;
             background-color:  #c3150e;
             color:  #f1f1f1;
         }</style>
-<table id="T_38fd4_">
+<table id="T_1fc56_">
 <thead>    <tr>        <th class="blank level0"></th>        <th class="col_heading level0 col0">0</th>        <th class="col_heading level0 col1">1</th>        <th class="col_heading level0 col2">2</th>        <th class="col_heading level0 col3">3</th>        <th class="col_heading level0 col4">4</th>        <th class="col_heading level0 col5">5</th>        <th class="col_heading level0 col6">6</th>        <th class="col_heading level0 col7">7</th>        <th class="col_heading level0 col8">8</th>        <th class="col_heading level0 col9">9</th>        <th class="col_heading level0 col10">10</th>        <th class="col_heading level0 col11">11</th>        <th class="col_heading level0 col12">12</th>        <th class="col_heading level0 col13">13</th>        <th class="col_heading level0 col14">14</th>        <th class="col_heading level0 col15">15</th>        <th class="col_heading level0 col16">16</th>        <th class="col_heading level0 col17">17</th>    </tr>
 </thead>
 <tbody>
                 <tr>
-                        <th id="T_38fd4_level0_row0" class="row_heading level0 row0">0</th>
-                        <td id="T_38fd4_row0_col0" class="data row0 col0">0</td>
-                        <td id="T_38fd4_row0_col1" class="data row0 col1">0</td>
-                        <td id="T_38fd4_row0_col2" class="data row0 col2">0</td>
-                        <td id="T_38fd4_row0_col3" class="data row0 col3">0</td>
-                        <td id="T_38fd4_row0_col4" class="data row0 col4">0</td>
-                        <td id="T_38fd4_row0_col5" class="data row0 col5">0</td>
-                        <td id="T_38fd4_row0_col6" class="data row0 col6">0</td>
-                        <td id="T_38fd4_row0_col7" class="data row0 col7">0</td>
-                        <td id="T_38fd4_row0_col8" class="data row0 col8">0</td>
-                        <td id="T_38fd4_row0_col9" class="data row0 col9">0</td>
-                        <td id="T_38fd4_row0_col10" class="data row0 col10">0</td>
-                        <td id="T_38fd4_row0_col11" class="data row0 col11">0</td>
-                        <td id="T_38fd4_row0_col12" class="data row0 col12">0</td>
-                        <td id="T_38fd4_row0_col13" class="data row0 col13">0</td>
-                        <td id="T_38fd4_row0_col14" class="data row0 col14">0</td>
-                        <td id="T_38fd4_row0_col15" class="data row0 col15">0</td>
-                        <td id="T_38fd4_row0_col16" class="data row0 col16">0</td>
-                        <td id="T_38fd4_row0_col17" class="data row0 col17">0</td>
+                        <th id="T_1fc56_level0_row0" class="row_heading level0 row0">0</th>
+                        <td id="T_1fc56_row0_col0" class="data row0 col0">0</td>
+                        <td id="T_1fc56_row0_col1" class="data row0 col1">0</td>
+                        <td id="T_1fc56_row0_col2" class="data row0 col2">0</td>
+                        <td id="T_1fc56_row0_col3" class="data row0 col3">0</td>
+                        <td id="T_1fc56_row0_col4" class="data row0 col4">0</td>
+                        <td id="T_1fc56_row0_col5" class="data row0 col5">0</td>
+                        <td id="T_1fc56_row0_col6" class="data row0 col6">0</td>
+                        <td id="T_1fc56_row0_col7" class="data row0 col7">0</td>
+                        <td id="T_1fc56_row0_col8" class="data row0 col8">0</td>
+                        <td id="T_1fc56_row0_col9" class="data row0 col9">0</td>
+                        <td id="T_1fc56_row0_col10" class="data row0 col10">0</td>
+                        <td id="T_1fc56_row0_col11" class="data row0 col11">0</td>
+                        <td id="T_1fc56_row0_col12" class="data row0 col12">0</td>
+                        <td id="T_1fc56_row0_col13" class="data row0 col13">0</td>
+                        <td id="T_1fc56_row0_col14" class="data row0 col14">0</td>
+                        <td id="T_1fc56_row0_col15" class="data row0 col15">0</td>
+                        <td id="T_1fc56_row0_col16" class="data row0 col16">0</td>
+                        <td id="T_1fc56_row0_col17" class="data row0 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_38fd4_level0_row1" class="row_heading level0 row1">1</th>
-                        <td id="T_38fd4_row1_col0" class="data row1 col0">0</td>
-                        <td id="T_38fd4_row1_col1" class="data row1 col1">0</td>
-                        <td id="T_38fd4_row1_col2" class="data row1 col2">0</td>
-                        <td id="T_38fd4_row1_col3" class="data row1 col3">0</td>
-                        <td id="T_38fd4_row1_col4" class="data row1 col4">0</td>
-                        <td id="T_38fd4_row1_col5" class="data row1 col5">29</td>
-                        <td id="T_38fd4_row1_col6" class="data row1 col6">150</td>
-                        <td id="T_38fd4_row1_col7" class="data row1 col7">195</td>
-                        <td id="T_38fd4_row1_col8" class="data row1 col8">254</td>
-                        <td id="T_38fd4_row1_col9" class="data row1 col9">255</td>
-                        <td id="T_38fd4_row1_col10" class="data row1 col10">254</td>
-                        <td id="T_38fd4_row1_col11" class="data row1 col11">176</td>
-                        <td id="T_38fd4_row1_col12" class="data row1 col12">193</td>
-                        <td id="T_38fd4_row1_col13" class="data row1 col13">150</td>
-                        <td id="T_38fd4_row1_col14" class="data row1 col14">96</td>
-                        <td id="T_38fd4_row1_col15" class="data row1 col15">0</td>
-                        <td id="T_38fd4_row1_col16" class="data row1 col16">0</td>
-                        <td id="T_38fd4_row1_col17" class="data row1 col17">0</td>
+                        <th id="T_1fc56_level0_row1" class="row_heading level0 row1">1</th>
+                        <td id="T_1fc56_row1_col0" class="data row1 col0">0</td>
+                        <td id="T_1fc56_row1_col1" class="data row1 col1">0</td>
+                        <td id="T_1fc56_row1_col2" class="data row1 col2">0</td>
+                        <td id="T_1fc56_row1_col3" class="data row1 col3">0</td>
+                        <td id="T_1fc56_row1_col4" class="data row1 col4">0</td>
+                        <td id="T_1fc56_row1_col5" class="data row1 col5">29</td>
+                        <td id="T_1fc56_row1_col6" class="data row1 col6">150</td>
+                        <td id="T_1fc56_row1_col7" class="data row1 col7">195</td>
+                        <td id="T_1fc56_row1_col8" class="data row1 col8">254</td>
+                        <td id="T_1fc56_row1_col9" class="data row1 col9">255</td>
+                        <td id="T_1fc56_row1_col10" class="data row1 col10">254</td>
+                        <td id="T_1fc56_row1_col11" class="data row1 col11">176</td>
+                        <td id="T_1fc56_row1_col12" class="data row1 col12">193</td>
+                        <td id="T_1fc56_row1_col13" class="data row1 col13">150</td>
+                        <td id="T_1fc56_row1_col14" class="data row1 col14">96</td>
+                        <td id="T_1fc56_row1_col15" class="data row1 col15">0</td>
+                        <td id="T_1fc56_row1_col16" class="data row1 col16">0</td>
+                        <td id="T_1fc56_row1_col17" class="data row1 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_38fd4_level0_row2" class="row_heading level0 row2">2</th>
-                        <td id="T_38fd4_row2_col0" class="data row2 col0">0</td>
-                        <td id="T_38fd4_row2_col1" class="data row2 col1">0</td>
-                        <td id="T_38fd4_row2_col2" class="data row2 col2">0</td>
-                        <td id="T_38fd4_row2_col3" class="data row2 col3">48</td>
-                        <td id="T_38fd4_row2_col4" class="data row2 col4">166</td>
-                        <td id="T_38fd4_row2_col5" class="data row2 col5">224</td>
-                        <td id="T_38fd4_row2_col6" class="data row2 col6">253</td>
-                        <td id="T_38fd4_row2_col7" class="data row2 col7">253</td>
-                        <td id="T_38fd4_row2_col8" class="data row2 col8">234</td>
-                        <td id="T_38fd4_row2_col9" class="data row2 col9">196</td>
-                        <td id="T_38fd4_row2_col10" class="data row2 col10">253</td>
-                        <td id="T_38fd4_row2_col11" class="data row2 col11">253</td>
-                        <td id="T_38fd4_row2_col12" class="data row2 col12">253</td>
-                        <td id="T_38fd4_row2_col13" class="data row2 col13">253</td>
-                        <td id="T_38fd4_row2_col14" class="data row2 col14">233</td>
-                        <td id="T_38fd4_row2_col15" class="data row2 col15">0</td>
-                        <td id="T_38fd4_row2_col16" class="data row2 col16">0</td>
-                        <td id="T_38fd4_row2_col17" class="data row2 col17">0</td>
+                        <th id="T_1fc56_level0_row2" class="row_heading level0 row2">2</th>
+                        <td id="T_1fc56_row2_col0" class="data row2 col0">0</td>
+                        <td id="T_1fc56_row2_col1" class="data row2 col1">0</td>
+                        <td id="T_1fc56_row2_col2" class="data row2 col2">0</td>
+                        <td id="T_1fc56_row2_col3" class="data row2 col3">48</td>
+                        <td id="T_1fc56_row2_col4" class="data row2 col4">166</td>
+                        <td id="T_1fc56_row2_col5" class="data row2 col5">224</td>
+                        <td id="T_1fc56_row2_col6" class="data row2 col6">253</td>
+                        <td id="T_1fc56_row2_col7" class="data row2 col7">253</td>
+                        <td id="T_1fc56_row2_col8" class="data row2 col8">234</td>
+                        <td id="T_1fc56_row2_col9" class="data row2 col9">196</td>
+                        <td id="T_1fc56_row2_col10" class="data row2 col10">253</td>
+                        <td id="T_1fc56_row2_col11" class="data row2 col11">253</td>
+                        <td id="T_1fc56_row2_col12" class="data row2 col12">253</td>
+                        <td id="T_1fc56_row2_col13" class="data row2 col13">253</td>
+                        <td id="T_1fc56_row2_col14" class="data row2 col14">233</td>
+                        <td id="T_1fc56_row2_col15" class="data row2 col15">0</td>
+                        <td id="T_1fc56_row2_col16" class="data row2 col16">0</td>
+                        <td id="T_1fc56_row2_col17" class="data row2 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_38fd4_level0_row3" class="row_heading level0 row3">3</th>
-                        <td id="T_38fd4_row3_col0" class="data row3 col0">0</td>
-                        <td id="T_38fd4_row3_col1" class="data row3 col1">93</td>
-                        <td id="T_38fd4_row3_col2" class="data row3 col2">244</td>
-                        <td id="T_38fd4_row3_col3" class="data row3 col3">249</td>
-                        <td id="T_38fd4_row3_col4" class="data row3 col4">253</td>
-                        <td id="T_38fd4_row3_col5" class="data row3 col5">187</td>
-                        <td id="T_38fd4_row3_col6" class="data row3 col6">46</td>
-                        <td id="T_38fd4_row3_col7" class="data row3 col7">10</td>
-                        <td id="T_38fd4_row3_col8" class="data row3 col8">8</td>
-                        <td id="T_38fd4_row3_col9" class="data row3 col9">4</td>
-                        <td id="T_38fd4_row3_col10" class="data row3 col10">10</td>
-                        <td id="T_38fd4_row3_col11" class="data row3 col11">194</td>
-                        <td id="T_38fd4_row3_col12" class="data row3 col12">253</td>
-                        <td id="T_38fd4_row3_col13" class="data row3 col13">253</td>
-                        <td id="T_38fd4_row3_col14" class="data row3 col14">233</td>
-                        <td id="T_38fd4_row3_col15" class="data row3 col15">0</td>
-                        <td id="T_38fd4_row3_col16" class="data row3 col16">0</td>
-                        <td id="T_38fd4_row3_col17" class="data row3 col17">0</td>
+                        <th id="T_1fc56_level0_row3" class="row_heading level0 row3">3</th>
+                        <td id="T_1fc56_row3_col0" class="data row3 col0">0</td>
+                        <td id="T_1fc56_row3_col1" class="data row3 col1">93</td>
+                        <td id="T_1fc56_row3_col2" class="data row3 col2">244</td>
+                        <td id="T_1fc56_row3_col3" class="data row3 col3">249</td>
+                        <td id="T_1fc56_row3_col4" class="data row3 col4">253</td>
+                        <td id="T_1fc56_row3_col5" class="data row3 col5">187</td>
+                        <td id="T_1fc56_row3_col6" class="data row3 col6">46</td>
+                        <td id="T_1fc56_row3_col7" class="data row3 col7">10</td>
+                        <td id="T_1fc56_row3_col8" class="data row3 col8">8</td>
+                        <td id="T_1fc56_row3_col9" class="data row3 col9">4</td>
+                        <td id="T_1fc56_row3_col10" class="data row3 col10">10</td>
+                        <td id="T_1fc56_row3_col11" class="data row3 col11">194</td>
+                        <td id="T_1fc56_row3_col12" class="data row3 col12">253</td>
+                        <td id="T_1fc56_row3_col13" class="data row3 col13">253</td>
+                        <td id="T_1fc56_row3_col14" class="data row3 col14">233</td>
+                        <td id="T_1fc56_row3_col15" class="data row3 col15">0</td>
+                        <td id="T_1fc56_row3_col16" class="data row3 col16">0</td>
+                        <td id="T_1fc56_row3_col17" class="data row3 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_38fd4_level0_row4" class="row_heading level0 row4">4</th>
-                        <td id="T_38fd4_row4_col0" class="data row4 col0">0</td>
-                        <td id="T_38fd4_row4_col1" class="data row4 col1">107</td>
-                        <td id="T_38fd4_row4_col2" class="data row4 col2">253</td>
-                        <td id="T_38fd4_row4_col3" class="data row4 col3">253</td>
-                        <td id="T_38fd4_row4_col4" class="data row4 col4">230</td>
-                        <td id="T_38fd4_row4_col5" class="data row4 col5">48</td>
-                        <td id="T_38fd4_row4_col6" class="data row4 col6">0</td>
-                        <td id="T_38fd4_row4_col7" class="data row4 col7">0</td>
-                        <td id="T_38fd4_row4_col8" class="data row4 col8">0</td>
-                        <td id="T_38fd4_row4_col9" class="data row4 col9">0</td>
-                        <td id="T_38fd4_row4_col10" class="data row4 col10">0</td>
-                        <td id="T_38fd4_row4_col11" class="data row4 col11">192</td>
-                        <td id="T_38fd4_row4_col12" class="data row4 col12">253</td>
-                        <td id="T_38fd4_row4_col13" class="data row4 col13">253</td>
-                        <td id="T_38fd4_row4_col14" class="data row4 col14">156</td>
-                        <td id="T_38fd4_row4_col15" class="data row4 col15">0</td>
-                        <td id="T_38fd4_row4_col16" class="data row4 col16">0</td>
-                        <td id="T_38fd4_row4_col17" class="data row4 col17">0</td>
+                        <th id="T_1fc56_level0_row4" class="row_heading level0 row4">4</th>
+                        <td id="T_1fc56_row4_col0" class="data row4 col0">0</td>
+                        <td id="T_1fc56_row4_col1" class="data row4 col1">107</td>
+                        <td id="T_1fc56_row4_col2" class="data row4 col2">253</td>
+                        <td id="T_1fc56_row4_col3" class="data row4 col3">253</td>
+                        <td id="T_1fc56_row4_col4" class="data row4 col4">230</td>
+                        <td id="T_1fc56_row4_col5" class="data row4 col5">48</td>
+                        <td id="T_1fc56_row4_col6" class="data row4 col6">0</td>
+                        <td id="T_1fc56_row4_col7" class="data row4 col7">0</td>
+                        <td id="T_1fc56_row4_col8" class="data row4 col8">0</td>
+                        <td id="T_1fc56_row4_col9" class="data row4 col9">0</td>
+                        <td id="T_1fc56_row4_col10" class="data row4 col10">0</td>
+                        <td id="T_1fc56_row4_col11" class="data row4 col11">192</td>
+                        <td id="T_1fc56_row4_col12" class="data row4 col12">253</td>
+                        <td id="T_1fc56_row4_col13" class="data row4 col13">253</td>
+                        <td id="T_1fc56_row4_col14" class="data row4 col14">156</td>
+                        <td id="T_1fc56_row4_col15" class="data row4 col15">0</td>
+                        <td id="T_1fc56_row4_col16" class="data row4 col16">0</td>
+                        <td id="T_1fc56_row4_col17" class="data row4 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_38fd4_level0_row5" class="row_heading level0 row5">5</th>
-                        <td id="T_38fd4_row5_col0" class="data row5 col0">0</td>
-                        <td id="T_38fd4_row5_col1" class="data row5 col1">3</td>
-                        <td id="T_38fd4_row5_col2" class="data row5 col2">20</td>
-                        <td id="T_38fd4_row5_col3" class="data row5 col3">20</td>
-                        <td id="T_38fd4_row5_col4" class="data row5 col4">15</td>
-                        <td id="T_38fd4_row5_col5" class="data row5 col5">0</td>
-                        <td id="T_38fd4_row5_col6" class="data row5 col6">0</td>
-                        <td id="T_38fd4_row5_col7" class="data row5 col7">0</td>
-                        <td id="T_38fd4_row5_col8" class="data row5 col8">0</td>
-                        <td id="T_38fd4_row5_col9" class="data row5 col9">0</td>
-                        <td id="T_38fd4_row5_col10" class="data row5 col10">43</td>
-                        <td id="T_38fd4_row5_col11" class="data row5 col11">224</td>
-                        <td id="T_38fd4_row5_col12" class="data row5 col12">253</td>
-                        <td id="T_38fd4_row5_col13" class="data row5 col13">245</td>
-                        <td id="T_38fd4_row5_col14" class="data row5 col14">74</td>
-                        <td id="T_38fd4_row5_col15" class="data row5 col15">0</td>
-                        <td id="T_38fd4_row5_col16" class="data row5 col16">0</td>
-                        <td id="T_38fd4_row5_col17" class="data row5 col17">0</td>
+                        <th id="T_1fc56_level0_row5" class="row_heading level0 row5">5</th>
+                        <td id="T_1fc56_row5_col0" class="data row5 col0">0</td>
+                        <td id="T_1fc56_row5_col1" class="data row5 col1">3</td>
+                        <td id="T_1fc56_row5_col2" class="data row5 col2">20</td>
+                        <td id="T_1fc56_row5_col3" class="data row5 col3">20</td>
+                        <td id="T_1fc56_row5_col4" class="data row5 col4">15</td>
+                        <td id="T_1fc56_row5_col5" class="data row5 col5">0</td>
+                        <td id="T_1fc56_row5_col6" class="data row5 col6">0</td>
+                        <td id="T_1fc56_row5_col7" class="data row5 col7">0</td>
+                        <td id="T_1fc56_row5_col8" class="data row5 col8">0</td>
+                        <td id="T_1fc56_row5_col9" class="data row5 col9">0</td>
+                        <td id="T_1fc56_row5_col10" class="data row5 col10">43</td>
+                        <td id="T_1fc56_row5_col11" class="data row5 col11">224</td>
+                        <td id="T_1fc56_row5_col12" class="data row5 col12">253</td>
+                        <td id="T_1fc56_row5_col13" class="data row5 col13">245</td>
+                        <td id="T_1fc56_row5_col14" class="data row5 col14">74</td>
+                        <td id="T_1fc56_row5_col15" class="data row5 col15">0</td>
+                        <td id="T_1fc56_row5_col16" class="data row5 col16">0</td>
+                        <td id="T_1fc56_row5_col17" class="data row5 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_38fd4_level0_row6" class="row_heading level0 row6">6</th>
-                        <td id="T_38fd4_row6_col0" class="data row6 col0">0</td>
-                        <td id="T_38fd4_row6_col1" class="data row6 col1">0</td>
-                        <td id="T_38fd4_row6_col2" class="data row6 col2">0</td>
-                        <td id="T_38fd4_row6_col3" class="data row6 col3">0</td>
-                        <td id="T_38fd4_row6_col4" class="data row6 col4">0</td>
-                        <td id="T_38fd4_row6_col5" class="data row6 col5">0</td>
-                        <td id="T_38fd4_row6_col6" class="data row6 col6">0</td>
-                        <td id="T_38fd4_row6_col7" class="data row6 col7">0</td>
-                        <td id="T_38fd4_row6_col8" class="data row6 col8">0</td>
-                        <td id="T_38fd4_row6_col9" class="data row6 col9">0</td>
-                        <td id="T_38fd4_row6_col10" class="data row6 col10">249</td>
-                        <td id="T_38fd4_row6_col11" class="data row6 col11">253</td>
-                        <td id="T_38fd4_row6_col12" class="data row6 col12">245</td>
-                        <td id="T_38fd4_row6_col13" class="data row6 col13">126</td>
-                        <td id="T_38fd4_row6_col14" class="data row6 col14">0</td>
-                        <td id="T_38fd4_row6_col15" class="data row6 col15">0</td>
-                        <td id="T_38fd4_row6_col16" class="data row6 col16">0</td>
-                        <td id="T_38fd4_row6_col17" class="data row6 col17">0</td>
+                        <th id="T_1fc56_level0_row6" class="row_heading level0 row6">6</th>
+                        <td id="T_1fc56_row6_col0" class="data row6 col0">0</td>
+                        <td id="T_1fc56_row6_col1" class="data row6 col1">0</td>
+                        <td id="T_1fc56_row6_col2" class="data row6 col2">0</td>
+                        <td id="T_1fc56_row6_col3" class="data row6 col3">0</td>
+                        <td id="T_1fc56_row6_col4" class="data row6 col4">0</td>
+                        <td id="T_1fc56_row6_col5" class="data row6 col5">0</td>
+                        <td id="T_1fc56_row6_col6" class="data row6 col6">0</td>
+                        <td id="T_1fc56_row6_col7" class="data row6 col7">0</td>
+                        <td id="T_1fc56_row6_col8" class="data row6 col8">0</td>
+                        <td id="T_1fc56_row6_col9" class="data row6 col9">0</td>
+                        <td id="T_1fc56_row6_col10" class="data row6 col10">249</td>
+                        <td id="T_1fc56_row6_col11" class="data row6 col11">253</td>
+                        <td id="T_1fc56_row6_col12" class="data row6 col12">245</td>
+                        <td id="T_1fc56_row6_col13" class="data row6 col13">126</td>
+                        <td id="T_1fc56_row6_col14" class="data row6 col14">0</td>
+                        <td id="T_1fc56_row6_col15" class="data row6 col15">0</td>
+                        <td id="T_1fc56_row6_col16" class="data row6 col16">0</td>
+                        <td id="T_1fc56_row6_col17" class="data row6 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_38fd4_level0_row7" class="row_heading level0 row7">7</th>
-                        <td id="T_38fd4_row7_col0" class="data row7 col0">0</td>
-                        <td id="T_38fd4_row7_col1" class="data row7 col1">0</td>
-                        <td id="T_38fd4_row7_col2" class="data row7 col2">0</td>
-                        <td id="T_38fd4_row7_col3" class="data row7 col3">0</td>
-                        <td id="T_38fd4_row7_col4" class="data row7 col4">0</td>
-                        <td id="T_38fd4_row7_col5" class="data row7 col5">0</td>
-                        <td id="T_38fd4_row7_col6" class="data row7 col6">0</td>
-                        <td id="T_38fd4_row7_col7" class="data row7 col7">14</td>
-                        <td id="T_38fd4_row7_col8" class="data row7 col8">101</td>
-                        <td id="T_38fd4_row7_col9" class="data row7 col9">223</td>
-                        <td id="T_38fd4_row7_col10" class="data row7 col10">253</td>
-                        <td id="T_38fd4_row7_col11" class="data row7 col11">248</td>
-                        <td id="T_38fd4_row7_col12" class="data row7 col12">124</td>
-                        <td id="T_38fd4_row7_col13" class="data row7 col13">0</td>
-                        <td id="T_38fd4_row7_col14" class="data row7 col14">0</td>
-                        <td id="T_38fd4_row7_col15" class="data row7 col15">0</td>
-                        <td id="T_38fd4_row7_col16" class="data row7 col16">0</td>
-                        <td id="T_38fd4_row7_col17" class="data row7 col17">0</td>
+                        <th id="T_1fc56_level0_row7" class="row_heading level0 row7">7</th>
+                        <td id="T_1fc56_row7_col0" class="data row7 col0">0</td>
+                        <td id="T_1fc56_row7_col1" class="data row7 col1">0</td>
+                        <td id="T_1fc56_row7_col2" class="data row7 col2">0</td>
+                        <td id="T_1fc56_row7_col3" class="data row7 col3">0</td>
+                        <td id="T_1fc56_row7_col4" class="data row7 col4">0</td>
+                        <td id="T_1fc56_row7_col5" class="data row7 col5">0</td>
+                        <td id="T_1fc56_row7_col6" class="data row7 col6">0</td>
+                        <td id="T_1fc56_row7_col7" class="data row7 col7">14</td>
+                        <td id="T_1fc56_row7_col8" class="data row7 col8">101</td>
+                        <td id="T_1fc56_row7_col9" class="data row7 col9">223</td>
+                        <td id="T_1fc56_row7_col10" class="data row7 col10">253</td>
+                        <td id="T_1fc56_row7_col11" class="data row7 col11">248</td>
+                        <td id="T_1fc56_row7_col12" class="data row7 col12">124</td>
+                        <td id="T_1fc56_row7_col13" class="data row7 col13">0</td>
+                        <td id="T_1fc56_row7_col14" class="data row7 col14">0</td>
+                        <td id="T_1fc56_row7_col15" class="data row7 col15">0</td>
+                        <td id="T_1fc56_row7_col16" class="data row7 col16">0</td>
+                        <td id="T_1fc56_row7_col17" class="data row7 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_38fd4_level0_row8" class="row_heading level0 row8">8</th>
-                        <td id="T_38fd4_row8_col0" class="data row8 col0">0</td>
-                        <td id="T_38fd4_row8_col1" class="data row8 col1">0</td>
-                        <td id="T_38fd4_row8_col2" class="data row8 col2">0</td>
-                        <td id="T_38fd4_row8_col3" class="data row8 col3">0</td>
-                        <td id="T_38fd4_row8_col4" class="data row8 col4">0</td>
-                        <td id="T_38fd4_row8_col5" class="data row8 col5">11</td>
-                        <td id="T_38fd4_row8_col6" class="data row8 col6">166</td>
-                        <td id="T_38fd4_row8_col7" class="data row8 col7">239</td>
-                        <td id="T_38fd4_row8_col8" class="data row8 col8">253</td>
-                        <td id="T_38fd4_row8_col9" class="data row8 col9">253</td>
-                        <td id="T_38fd4_row8_col10" class="data row8 col10">253</td>
-                        <td id="T_38fd4_row8_col11" class="data row8 col11">187</td>
-                        <td id="T_38fd4_row8_col12" class="data row8 col12">30</td>
-                        <td id="T_38fd4_row8_col13" class="data row8 col13">0</td>
-                        <td id="T_38fd4_row8_col14" class="data row8 col14">0</td>
-                        <td id="T_38fd4_row8_col15" class="data row8 col15">0</td>
-                        <td id="T_38fd4_row8_col16" class="data row8 col16">0</td>
-                        <td id="T_38fd4_row8_col17" class="data row8 col17">0</td>
+                        <th id="T_1fc56_level0_row8" class="row_heading level0 row8">8</th>
+                        <td id="T_1fc56_row8_col0" class="data row8 col0">0</td>
+                        <td id="T_1fc56_row8_col1" class="data row8 col1">0</td>
+                        <td id="T_1fc56_row8_col2" class="data row8 col2">0</td>
+                        <td id="T_1fc56_row8_col3" class="data row8 col3">0</td>
+                        <td id="T_1fc56_row8_col4" class="data row8 col4">0</td>
+                        <td id="T_1fc56_row8_col5" class="data row8 col5">11</td>
+                        <td id="T_1fc56_row8_col6" class="data row8 col6">166</td>
+                        <td id="T_1fc56_row8_col7" class="data row8 col7">239</td>
+                        <td id="T_1fc56_row8_col8" class="data row8 col8">253</td>
+                        <td id="T_1fc56_row8_col9" class="data row8 col9">253</td>
+                        <td id="T_1fc56_row8_col10" class="data row8 col10">253</td>
+                        <td id="T_1fc56_row8_col11" class="data row8 col11">187</td>
+                        <td id="T_1fc56_row8_col12" class="data row8 col12">30</td>
+                        <td id="T_1fc56_row8_col13" class="data row8 col13">0</td>
+                        <td id="T_1fc56_row8_col14" class="data row8 col14">0</td>
+                        <td id="T_1fc56_row8_col15" class="data row8 col15">0</td>
+                        <td id="T_1fc56_row8_col16" class="data row8 col16">0</td>
+                        <td id="T_1fc56_row8_col17" class="data row8 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_38fd4_level0_row9" class="row_heading level0 row9">9</th>
-                        <td id="T_38fd4_row9_col0" class="data row9 col0">0</td>
-                        <td id="T_38fd4_row9_col1" class="data row9 col1">0</td>
-                        <td id="T_38fd4_row9_col2" class="data row9 col2">0</td>
-                        <td id="T_38fd4_row9_col3" class="data row9 col3">0</td>
-                        <td id="T_38fd4_row9_col4" class="data row9 col4">0</td>
-                        <td id="T_38fd4_row9_col5" class="data row9 col5">16</td>
-                        <td id="T_38fd4_row9_col6" class="data row9 col6">248</td>
-                        <td id="T_38fd4_row9_col7" class="data row9 col7">250</td>
-                        <td id="T_38fd4_row9_col8" class="data row9 col8">253</td>
-                        <td id="T_38fd4_row9_col9" class="data row9 col9">253</td>
-                        <td id="T_38fd4_row9_col10" class="data row9 col10">253</td>
-                        <td id="T_38fd4_row9_col11" class="data row9 col11">253</td>
-                        <td id="T_38fd4_row9_col12" class="data row9 col12">232</td>
-                        <td id="T_38fd4_row9_col13" class="data row9 col13">213</td>
-                        <td id="T_38fd4_row9_col14" class="data row9 col14">111</td>
-                        <td id="T_38fd4_row9_col15" class="data row9 col15">2</td>
-                        <td id="T_38fd4_row9_col16" class="data row9 col16">0</td>
-                        <td id="T_38fd4_row9_col17" class="data row9 col17">0</td>
+                        <th id="T_1fc56_level0_row9" class="row_heading level0 row9">9</th>
+                        <td id="T_1fc56_row9_col0" class="data row9 col0">0</td>
+                        <td id="T_1fc56_row9_col1" class="data row9 col1">0</td>
+                        <td id="T_1fc56_row9_col2" class="data row9 col2">0</td>
+                        <td id="T_1fc56_row9_col3" class="data row9 col3">0</td>
+                        <td id="T_1fc56_row9_col4" class="data row9 col4">0</td>
+                        <td id="T_1fc56_row9_col5" class="data row9 col5">16</td>
+                        <td id="T_1fc56_row9_col6" class="data row9 col6">248</td>
+                        <td id="T_1fc56_row9_col7" class="data row9 col7">250</td>
+                        <td id="T_1fc56_row9_col8" class="data row9 col8">253</td>
+                        <td id="T_1fc56_row9_col9" class="data row9 col9">253</td>
+                        <td id="T_1fc56_row9_col10" class="data row9 col10">253</td>
+                        <td id="T_1fc56_row9_col11" class="data row9 col11">253</td>
+                        <td id="T_1fc56_row9_col12" class="data row9 col12">232</td>
+                        <td id="T_1fc56_row9_col13" class="data row9 col13">213</td>
+                        <td id="T_1fc56_row9_col14" class="data row9 col14">111</td>
+                        <td id="T_1fc56_row9_col15" class="data row9 col15">2</td>
+                        <td id="T_1fc56_row9_col16" class="data row9 col16">0</td>
+                        <td id="T_1fc56_row9_col17" class="data row9 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_38fd4_level0_row10" class="row_heading level0 row10">10</th>
-                        <td id="T_38fd4_row10_col0" class="data row10 col0">0</td>
-                        <td id="T_38fd4_row10_col1" class="data row10 col1">0</td>
-                        <td id="T_38fd4_row10_col2" class="data row10 col2">0</td>
-                        <td id="T_38fd4_row10_col3" class="data row10 col3">0</td>
-                        <td id="T_38fd4_row10_col4" class="data row10 col4">0</td>
-                        <td id="T_38fd4_row10_col5" class="data row10 col5">0</td>
-                        <td id="T_38fd4_row10_col6" class="data row10 col6">0</td>
-                        <td id="T_38fd4_row10_col7" class="data row10 col7">43</td>
-                        <td id="T_38fd4_row10_col8" class="data row10 col8">98</td>
-                        <td id="T_38fd4_row10_col9" class="data row10 col9">98</td>
-                        <td id="T_38fd4_row10_col10" class="data row10 col10">208</td>
-                        <td id="T_38fd4_row10_col11" class="data row10 col11">253</td>
-                        <td id="T_38fd4_row10_col12" class="data row10 col12">253</td>
-                        <td id="T_38fd4_row10_col13" class="data row10 col13">253</td>
-                        <td id="T_38fd4_row10_col14" class="data row10 col14">253</td>
-                        <td id="T_38fd4_row10_col15" class="data row10 col15">187</td>
-                        <td id="T_38fd4_row10_col16" class="data row10 col16">22</td>
-                        <td id="T_38fd4_row10_col17" class="data row10 col17">0</td>
+                        <th id="T_1fc56_level0_row10" class="row_heading level0 row10">10</th>
+                        <td id="T_1fc56_row10_col0" class="data row10 col0">0</td>
+                        <td id="T_1fc56_row10_col1" class="data row10 col1">0</td>
+                        <td id="T_1fc56_row10_col2" class="data row10 col2">0</td>
+                        <td id="T_1fc56_row10_col3" class="data row10 col3">0</td>
+                        <td id="T_1fc56_row10_col4" class="data row10 col4">0</td>
+                        <td id="T_1fc56_row10_col5" class="data row10 col5">0</td>
+                        <td id="T_1fc56_row10_col6" class="data row10 col6">0</td>
+                        <td id="T_1fc56_row10_col7" class="data row10 col7">43</td>
+                        <td id="T_1fc56_row10_col8" class="data row10 col8">98</td>
+                        <td id="T_1fc56_row10_col9" class="data row10 col9">98</td>
+                        <td id="T_1fc56_row10_col10" class="data row10 col10">208</td>
+                        <td id="T_1fc56_row10_col11" class="data row10 col11">253</td>
+                        <td id="T_1fc56_row10_col12" class="data row10 col12">253</td>
+                        <td id="T_1fc56_row10_col13" class="data row10 col13">253</td>
+                        <td id="T_1fc56_row10_col14" class="data row10 col14">253</td>
+                        <td id="T_1fc56_row10_col15" class="data row10 col15">187</td>
+                        <td id="T_1fc56_row10_col16" class="data row10 col16">22</td>
+                        <td id="T_1fc56_row10_col17" class="data row10 col17">0</td>
             </tr>
     </tbody>
 </table>
@@ -1298,6 +1313,15 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Baseline:-Pixel-similarity">
+<a class="anchor" href="#Baseline:-Pixel-similarity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Baseline: Pixel similarity<a class="anchor-link" href="#Baseline:-Pixel-similarity"> </a>
+</h2>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1338,7 +1362,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>’sevens’ are still list of paths. ’o’ is a path in the list, then with the list comprehension we use the path to read the image, then cast the image into tensor.(Same for threes)
 </div>
 
@@ -1382,9 +1406,9 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
-<div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Note: </strong>Show image shows the first tensor as image
+<div class="flash flash-success">
+    <svg class="octicon octicon-checklist octicon octicon-checklist octicon octicon-checklist octicon octicon-checklist" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 1.75a.25.25 0 01.25-.25h8.5a.25.25 0 01.25.25v7.736a.75.75 0 101.5 0V1.75A1.75 1.75 0 0011.25 0h-8.5A1.75 1.75 0 001 1.75v11.5c0 .966.784 1.75 1.75 1.75h3.17a.75.75 0 000-1.5H2.75a.25.25 0 01-.25-.25V1.75zM4.75 4a.75.75 0 000 1.5h4.5a.75.75 0 000-1.5h-4.5zM4 7.75A.75.75 0 014.75 7h2a.75.75 0 010 1.5h-2A.75.75 0 014 7.75zm11.774 3.537a.75.75 0 00-1.048-1.074L10.7 14.145 9.281 12.72a.75.75 0 00-1.062 1.058l1.943 1.95a.75.75 0 001.055.008l4.557-4.45z"></path></svg>
+    <strong>Tip: </strong>Show image shows the first tensor as image
 </div>
 
 </div>
@@ -1438,10 +1462,19 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>check this  in more straight way (im3&gt;tensor&gt;image) 
 </div>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Stacking-Tensors">
+<a class="anchor" href="#Stacking-Tensors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stacking Tensors<a class="anchor-link" href="#Stacking-Tensors"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -1584,7 +1617,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>now we turn our list into a tensor size of ([6131, 28, 28])
 </div>
 
@@ -1629,7 +1662,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>This is rank (lenght of the shape)
 </div>
 
@@ -1674,7 +1707,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>This is more direct way to get it. (ndim)
 </div>
 
@@ -1720,7 +1753,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>This is the mean of the all tensors through first axis. ’Perfect three’
 </div>
 
@@ -1800,7 +1833,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>Then we need to calculate the distance between the ’perfect’ and ordinary three.
 </div>
 
@@ -1812,7 +1845,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>two methods for getting the distance L1 Norm and MSE second one is panelize bigger mistake more havil, L1 is uniform.
 </div>
 
@@ -1894,7 +1927,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>It is obvious that a_3 is closer to the perfect 3 so our approach worked at this time. (Both in L1 and MSE)
 </div>
 
@@ -1939,7 +1972,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>Same available from Pytorch function torch.nn.functional as F ( for mse, manually take the sqrt)
 </div>
 
@@ -4491,7 +4524,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>The function <code>weights*pixels</code> won’t be flexible enough—it is always equal to 0 when the pixels are equal to 0 (i.e., its <em>intercept</em> is 0). You might remember from high school math that the formula for a line is <code>y=w*x+b</code>; we still need the <code>b</code>. We’ll initialize it to a random number too:
 </div>
 
