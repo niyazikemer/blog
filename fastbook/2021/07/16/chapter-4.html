@@ -131,7 +131,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#Baseline:-Pixel-similarity">Baseline: Pixel similarity </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Training-Set:--Stacking-Tensors">Training Set:  Stacking Tensors </a></li>
-<li class="toc-entry toc-h3"><a href="#Mean-of-threes-and-sevens-out-ideal-3-and-7-for-baseline-study.">Mean of threes and sevens out ideal 3 and 7 for baseline study. </a></li>
+<li class="toc-entry toc-h3"><a href="#Mean-of-threes-and-sevens-our-ideal-3-and-7.">Mean of threes and sevens our ideal 3 and 7. </a></li>
 <li class="toc-entry toc-h3"><a href="#Distance-between-the-ideal-three-and-other-threes">Distance between the ideal three and other threes </a></li>
 <li class="toc-entry toc-h3"><a href="#Pytorch-L1-and-MSE-fuctions">Pytorch L1 and MSE fuctions </a></li>
 <li class="toc-entry toc-h3"><a href="#Array-and-Tensor-Examples">Array and Tensor Examples </a>
@@ -140,7 +140,7 @@ window.onload = wrap_img;
 </ul>
 </li>
 <li class="toc-entry toc-h3"><a href="#Validation-set-:Stacking-Tensors">Validation set :Stacking Tensors </a></li>
-<li class="toc-entry toc-h3"><a href="#Manual-distance-function">Manual distance function </a></li>
+<li class="toc-entry toc-h3"><a href="#Manual-L1-distance-function">Manual L1 distance function </a></li>
 <li class="toc-entry toc-h3"><a href="#This-is-broadcasting:">This is broadcasting: </a>
 <ul>
 <li class="toc-entry toc-h4"><a href="#here-is-an-another-broadcasting-for-all-validation-set:">here is an another broadcasting for all validation set: </a></li>
@@ -151,23 +151,49 @@ window.onload = wrap_img;
 </li>
 <li class="toc-entry toc-h2"><a href="#Stochastic-Gradient-Descent-(SGD)">Stochastic Gradient Descent (SGD) </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#GD-example">GD example </a>
+<li class="toc-entry toc-h3"><a href="#GD-example">GD example </a></li>
+<li class="toc-entry toc-h3"><a href="#How-to-calculate-gradient:">How to calculate gradient: </a></li>
+<li class="toc-entry toc-h3"><a href="#End-to-end-SGD-example">End to end SGD example </a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#How-to-calculate-gradient:">How to calculate gradient: </a></li>
-<li class="toc-entry toc-h4"><a href="#End-to-end-SGD-example">End to end SGD example </a></li>
+<li class="toc-entry toc-h4"><a href="#Step-1:-here-are-initial-random-parameters:">Step 1: here are initial random parameters: </a></li>
+<li class="toc-entry toc-h4"><a href="#Step-2:-calculate-predictions:">Step 2: calculate predictions: </a></li>
+<li class="toc-entry toc-h4"><a href="#Step-3:-Calculate-the-loss">Step 3: Calculate the loss </a></li>
+<li class="toc-entry toc-h4"><a href="#Step-4:-first-we-calculate-the-gradient:">Step 4: first we calculate the gradient: </a></li>
+<li class="toc-entry toc-h4"><a href="#Step-5:-Step-the-weight.__">Step 5: Step the weight.__ </a></li>
+<li class="toc-entry toc-h4"><a href="#Step-6:-repeat-the-step:">Step 6: repeat the step: </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h3"><a href="#Now-create-a-loss-function-for-out-3-and-7-recognizer.-Currently-we-use-metric-not-loss">Now create a loss function for out 3 and 7 recognizer. Currently we use metric not loss </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#MNIST">MNIST </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Loss-Function-our-3-and-7-recognizer.-Currently-we-use-metric-not-loss">Loss Function our 3 and 7 recognizer. Currently we use metric not loss </a></li>
 <li class="toc-entry toc-h3"><a href="#How-tensor-manipulated">How tensor manipulated </a></li>
+<li class="toc-entry toc-h3"><a href="#How-unsqueeze-works?">How unsqueeze works? </a></li>
 <li class="toc-entry toc-h3"><a href="#Dataset">Dataset </a></li>
 <li class="toc-entry toc-h3"><a href="#Weights">Weights </a></li>
 <li class="toc-entry toc-h3"><a href="#Why-we-need-a-loss-Function">Why we need a loss Function </a></li>
 <li class="toc-entry toc-h3"><a href="#Sigmoid">Sigmoid </a></li>
-<li class="toc-entry toc-h3"><a href="#What-are-SGD-and-Mini-Batches">What are SGD and Mini-Batches </a></li>
+<li class="toc-entry toc-h3"><a href="#What-are-SGD-and-Mini-Batches">What are SGD and Mini-Batches </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#DataLoader">DataLoader </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#OPTIMIZER">OPTIMIZER </a></li>
-<li class="toc-entry toc-h2"><a href="#Adding-a-Nonlinearity">Adding a Nonlinearity </a></li>
+<li class="toc-entry toc-h3"><a href="#Training">Training </a></li>
+<li class="toc-entry toc-h3"><a href="#OPTIMIZER">OPTIMIZER </a></li>
+<li class="toc-entry toc-h3"><a href="#Fastai's-SDG-class">Fastai&#39;s SDG class </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Fastai's-Dataloaders">Fastai&#39;s Dataloaders </a></li>
+<li class="toc-entry toc-h4"><a href="#FastAi's-Fit">FastAi&#39;s Fit </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#Adding-a-Nonlinearity">Adding a Nonlinearity </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#recorder-is-a-fast-ai-method">recorder is a fast ai method </a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#Going-Deeper">Going Deeper </a></li>
 </ul><!--
 #################################################
@@ -285,7 +311,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>Path('/home/niyazi/.fastai/data/mnist_sample')</pre>
+<pre>Path('.')</pre>
 </div>
 
 </div>
@@ -876,445 +902,445 @@ window.onload = wrap_img;
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style type="text/css">
-#T_1fc56_row0_col0,#T_1fc56_row0_col1,#T_1fc56_row0_col2,#T_1fc56_row0_col3,#T_1fc56_row0_col4,#T_1fc56_row0_col5,#T_1fc56_row0_col6,#T_1fc56_row0_col7,#T_1fc56_row0_col8,#T_1fc56_row0_col9,#T_1fc56_row0_col10,#T_1fc56_row0_col11,#T_1fc56_row0_col12,#T_1fc56_row0_col13,#T_1fc56_row0_col14,#T_1fc56_row0_col15,#T_1fc56_row0_col16,#T_1fc56_row0_col17,#T_1fc56_row1_col0,#T_1fc56_row1_col1,#T_1fc56_row1_col2,#T_1fc56_row1_col3,#T_1fc56_row1_col4,#T_1fc56_row1_col15,#T_1fc56_row1_col16,#T_1fc56_row1_col17,#T_1fc56_row2_col0,#T_1fc56_row2_col1,#T_1fc56_row2_col2,#T_1fc56_row2_col15,#T_1fc56_row2_col16,#T_1fc56_row2_col17,#T_1fc56_row3_col0,#T_1fc56_row3_col15,#T_1fc56_row3_col16,#T_1fc56_row3_col17,#T_1fc56_row4_col0,#T_1fc56_row4_col6,#T_1fc56_row4_col7,#T_1fc56_row4_col8,#T_1fc56_row4_col9,#T_1fc56_row4_col10,#T_1fc56_row4_col15,#T_1fc56_row4_col16,#T_1fc56_row4_col17,#T_1fc56_row5_col0,#T_1fc56_row5_col5,#T_1fc56_row5_col6,#T_1fc56_row5_col7,#T_1fc56_row5_col8,#T_1fc56_row5_col9,#T_1fc56_row5_col15,#T_1fc56_row5_col16,#T_1fc56_row5_col17,#T_1fc56_row6_col0,#T_1fc56_row6_col1,#T_1fc56_row6_col2,#T_1fc56_row6_col3,#T_1fc56_row6_col4,#T_1fc56_row6_col5,#T_1fc56_row6_col6,#T_1fc56_row6_col7,#T_1fc56_row6_col8,#T_1fc56_row6_col9,#T_1fc56_row6_col14,#T_1fc56_row6_col15,#T_1fc56_row6_col16,#T_1fc56_row6_col17,#T_1fc56_row7_col0,#T_1fc56_row7_col1,#T_1fc56_row7_col2,#T_1fc56_row7_col3,#T_1fc56_row7_col4,#T_1fc56_row7_col5,#T_1fc56_row7_col6,#T_1fc56_row7_col13,#T_1fc56_row7_col14,#T_1fc56_row7_col15,#T_1fc56_row7_col16,#T_1fc56_row7_col17,#T_1fc56_row8_col0,#T_1fc56_row8_col1,#T_1fc56_row8_col2,#T_1fc56_row8_col3,#T_1fc56_row8_col4,#T_1fc56_row8_col13,#T_1fc56_row8_col14,#T_1fc56_row8_col15,#T_1fc56_row8_col16,#T_1fc56_row8_col17,#T_1fc56_row9_col0,#T_1fc56_row9_col1,#T_1fc56_row9_col2,#T_1fc56_row9_col3,#T_1fc56_row9_col4,#T_1fc56_row9_col16,#T_1fc56_row9_col17,#T_1fc56_row10_col0,#T_1fc56_row10_col1,#T_1fc56_row10_col2,#T_1fc56_row10_col3,#T_1fc56_row10_col4,#T_1fc56_row10_col5,#T_1fc56_row10_col6,#T_1fc56_row10_col17{
+#T_3c63c_row0_col0,#T_3c63c_row0_col1,#T_3c63c_row0_col2,#T_3c63c_row0_col3,#T_3c63c_row0_col4,#T_3c63c_row0_col5,#T_3c63c_row0_col6,#T_3c63c_row0_col7,#T_3c63c_row0_col8,#T_3c63c_row0_col9,#T_3c63c_row0_col10,#T_3c63c_row0_col11,#T_3c63c_row0_col12,#T_3c63c_row0_col13,#T_3c63c_row0_col14,#T_3c63c_row0_col15,#T_3c63c_row0_col16,#T_3c63c_row0_col17,#T_3c63c_row1_col0,#T_3c63c_row1_col1,#T_3c63c_row1_col2,#T_3c63c_row1_col3,#T_3c63c_row1_col4,#T_3c63c_row1_col15,#T_3c63c_row1_col16,#T_3c63c_row1_col17,#T_3c63c_row2_col0,#T_3c63c_row2_col1,#T_3c63c_row2_col2,#T_3c63c_row2_col15,#T_3c63c_row2_col16,#T_3c63c_row2_col17,#T_3c63c_row3_col0,#T_3c63c_row3_col15,#T_3c63c_row3_col16,#T_3c63c_row3_col17,#T_3c63c_row4_col0,#T_3c63c_row4_col6,#T_3c63c_row4_col7,#T_3c63c_row4_col8,#T_3c63c_row4_col9,#T_3c63c_row4_col10,#T_3c63c_row4_col15,#T_3c63c_row4_col16,#T_3c63c_row4_col17,#T_3c63c_row5_col0,#T_3c63c_row5_col5,#T_3c63c_row5_col6,#T_3c63c_row5_col7,#T_3c63c_row5_col8,#T_3c63c_row5_col9,#T_3c63c_row5_col15,#T_3c63c_row5_col16,#T_3c63c_row5_col17,#T_3c63c_row6_col0,#T_3c63c_row6_col1,#T_3c63c_row6_col2,#T_3c63c_row6_col3,#T_3c63c_row6_col4,#T_3c63c_row6_col5,#T_3c63c_row6_col6,#T_3c63c_row6_col7,#T_3c63c_row6_col8,#T_3c63c_row6_col9,#T_3c63c_row6_col14,#T_3c63c_row6_col15,#T_3c63c_row6_col16,#T_3c63c_row6_col17,#T_3c63c_row7_col0,#T_3c63c_row7_col1,#T_3c63c_row7_col2,#T_3c63c_row7_col3,#T_3c63c_row7_col4,#T_3c63c_row7_col5,#T_3c63c_row7_col6,#T_3c63c_row7_col13,#T_3c63c_row7_col14,#T_3c63c_row7_col15,#T_3c63c_row7_col16,#T_3c63c_row7_col17,#T_3c63c_row8_col0,#T_3c63c_row8_col1,#T_3c63c_row8_col2,#T_3c63c_row8_col3,#T_3c63c_row8_col4,#T_3c63c_row8_col13,#T_3c63c_row8_col14,#T_3c63c_row8_col15,#T_3c63c_row8_col16,#T_3c63c_row8_col17,#T_3c63c_row9_col0,#T_3c63c_row9_col1,#T_3c63c_row9_col2,#T_3c63c_row9_col3,#T_3c63c_row9_col4,#T_3c63c_row9_col16,#T_3c63c_row9_col17,#T_3c63c_row10_col0,#T_3c63c_row10_col1,#T_3c63c_row10_col2,#T_3c63c_row10_col3,#T_3c63c_row10_col4,#T_3c63c_row10_col5,#T_3c63c_row10_col6,#T_3c63c_row10_col17{
             font-size:  6pt;
             background-color:  #fff7ec;
             color:  #000000;
-        }#T_1fc56_row1_col5{
+        }#T_3c63c_row1_col5{
             font-size:  6pt;
             background-color:  #fee7c7;
             color:  #000000;
-        }#T_1fc56_row1_col6,#T_1fc56_row1_col13{
+        }#T_3c63c_row1_col6,#T_3c63c_row1_col13{
             font-size:  6pt;
             background-color:  #f2704c;
             color:  #000000;
-        }#T_1fc56_row1_col7{
+        }#T_3c63c_row1_col7{
             font-size:  6pt;
             background-color:  #d12719;
             color:  #f1f1f1;
-        }#T_1fc56_row1_col8,#T_1fc56_row1_col9,#T_1fc56_row1_col10,#T_1fc56_row2_col5,#T_1fc56_row2_col6,#T_1fc56_row2_col7,#T_1fc56_row2_col11,#T_1fc56_row2_col12,#T_1fc56_row2_col13,#T_1fc56_row3_col4,#T_1fc56_row3_col12,#T_1fc56_row3_col13,#T_1fc56_row4_col1,#T_1fc56_row4_col2,#T_1fc56_row4_col3,#T_1fc56_row4_col12,#T_1fc56_row4_col13,#T_1fc56_row5_col12,#T_1fc56_row6_col11,#T_1fc56_row9_col11,#T_1fc56_row10_col11,#T_1fc56_row10_col12,#T_1fc56_row10_col13,#T_1fc56_row10_col14,#T_1fc56_row10_col15,#T_1fc56_row10_col16{
+        }#T_3c63c_row1_col8,#T_3c63c_row1_col9,#T_3c63c_row1_col10,#T_3c63c_row2_col5,#T_3c63c_row2_col6,#T_3c63c_row2_col7,#T_3c63c_row2_col11,#T_3c63c_row2_col12,#T_3c63c_row2_col13,#T_3c63c_row3_col4,#T_3c63c_row3_col12,#T_3c63c_row3_col13,#T_3c63c_row4_col1,#T_3c63c_row4_col2,#T_3c63c_row4_col3,#T_3c63c_row4_col12,#T_3c63c_row4_col13,#T_3c63c_row5_col12,#T_3c63c_row6_col11,#T_3c63c_row9_col11,#T_3c63c_row10_col11,#T_3c63c_row10_col12,#T_3c63c_row10_col13,#T_3c63c_row10_col14,#T_3c63c_row10_col15,#T_3c63c_row10_col16{
             font-size:  6pt;
             background-color:  #7f0000;
             color:  #f1f1f1;
-        }#T_1fc56_row1_col11{
+        }#T_3c63c_row1_col11{
             font-size:  6pt;
             background-color:  #e14630;
             color:  #f1f1f1;
-        }#T_1fc56_row1_col12{
+        }#T_3c63c_row1_col12{
             font-size:  6pt;
             background-color:  #d32a1b;
             color:  #f1f1f1;
-        }#T_1fc56_row1_col14{
+        }#T_3c63c_row1_col14{
             font-size:  6pt;
             background-color:  #fdb982;
             color:  #000000;
-        }#T_1fc56_row2_col3{
+        }#T_3c63c_row2_col3{
             font-size:  6pt;
             background-color:  #fddeb3;
             color:  #000000;
-        }#T_1fc56_row2_col4,#T_1fc56_row8_col6{
+        }#T_3c63c_row2_col4,#T_3c63c_row8_col6{
             font-size:  6pt;
             background-color:  #e9583e;
             color:  #000000;
-        }#T_1fc56_row2_col8,#T_1fc56_row2_col14,#T_1fc56_row3_col14{
+        }#T_3c63c_row2_col8,#T_3c63c_row2_col14,#T_3c63c_row3_col14{
             font-size:  6pt;
             background-color:  #a00000;
             color:  #f1f1f1;
-        }#T_1fc56_row2_col9,#T_1fc56_row3_col11{
+        }#T_3c63c_row2_col9,#T_3c63c_row3_col11{
             font-size:  6pt;
             background-color:  #d2291a;
             color:  #f1f1f1;
-        }#T_1fc56_row2_col10,#T_1fc56_row7_col10,#T_1fc56_row8_col8,#T_1fc56_row8_col10,#T_1fc56_row9_col8,#T_1fc56_row9_col10{
+        }#T_3c63c_row2_col10,#T_3c63c_row7_col10,#T_3c63c_row8_col8,#T_3c63c_row8_col10,#T_3c63c_row9_col8,#T_3c63c_row9_col10{
             font-size:  6pt;
             background-color:  #810000;
             color:  #f1f1f1;
-        }#T_1fc56_row3_col1{
+        }#T_3c63c_row3_col1{
             font-size:  6pt;
             background-color:  #b40201;
             color:  #f1f1f1;
-        }#T_1fc56_row3_col2{
+        }#T_3c63c_row3_col2{
             font-size:  6pt;
             background-color:  #8e0000;
             color:  #f1f1f1;
-        }#T_1fc56_row3_col3{
+        }#T_3c63c_row3_col3{
             font-size:  6pt;
             background-color:  #860000;
             color:  #f1f1f1;
-        }#T_1fc56_row3_col5{
+        }#T_3c63c_row3_col5{
             font-size:  6pt;
             background-color:  #be0f0a;
             color:  #f1f1f1;
-        }#T_1fc56_row3_col6{
+        }#T_3c63c_row3_col6{
             font-size:  6pt;
             background-color:  #fedfb5;
             color:  #000000;
-        }#T_1fc56_row3_col7,#T_1fc56_row3_col10{
+        }#T_3c63c_row3_col7,#T_3c63c_row3_col10{
             font-size:  6pt;
             background-color:  #fff2e1;
             color:  #000000;
-        }#T_1fc56_row3_col8{
+        }#T_3c63c_row3_col8{
             font-size:  6pt;
             background-color:  #fff3e3;
             color:  #000000;
-        }#T_1fc56_row3_col9{
+        }#T_3c63c_row3_col9{
             font-size:  6pt;
             background-color:  #fff5e7;
             color:  #000000;
-        }#T_1fc56_row4_col4{
+        }#T_3c63c_row4_col4{
             font-size:  6pt;
             background-color:  #a50000;
             color:  #f1f1f1;
-        }#T_1fc56_row4_col5{
+        }#T_3c63c_row4_col5{
             font-size:  6pt;
             background-color:  #fddaab;
             color:  #000000;
-        }#T_1fc56_row4_col11{
+        }#T_3c63c_row4_col11{
             font-size:  6pt;
             background-color:  #d42c1c;
             color:  #f1f1f1;
-        }#T_1fc56_row4_col14{
+        }#T_3c63c_row4_col14{
             font-size:  6pt;
             background-color:  #f06849;
             color:  #000000;
-        }#T_1fc56_row5_col1{
+        }#T_3c63c_row5_col1{
             font-size:  6pt;
             background-color:  #fff4e4;
             color:  #000000;
-        }#T_1fc56_row5_col2,#T_1fc56_row5_col3{
+        }#T_3c63c_row5_col2,#T_3c63c_row5_col3{
             font-size:  6pt;
             background-color:  #feeed5;
             color:  #000000;
-        }#T_1fc56_row5_col4{
+        }#T_3c63c_row5_col4{
             font-size:  6pt;
             background-color:  #fff0db;
             color:  #000000;
-        }#T_1fc56_row5_col10,#T_1fc56_row10_col7{
+        }#T_3c63c_row5_col10,#T_3c63c_row10_col7{
             font-size:  6pt;
             background-color:  #fee1b9;
             color:  #000000;
-        }#T_1fc56_row5_col11{
+        }#T_3c63c_row5_col11{
             font-size:  6pt;
             background-color:  #ae0000;
             color:  #f1f1f1;
-        }#T_1fc56_row5_col13,#T_1fc56_row6_col12{
+        }#T_3c63c_row5_col13,#T_3c63c_row6_col12{
             font-size:  6pt;
             background-color:  #8c0000;
             color:  #f1f1f1;
-        }#T_1fc56_row5_col14{
+        }#T_3c63c_row5_col14{
             font-size:  6pt;
             background-color:  #fdcc96;
             color:  #000000;
-        }#T_1fc56_row6_col10,#T_1fc56_row7_col11,#T_1fc56_row9_col6{
+        }#T_3c63c_row6_col10,#T_3c63c_row7_col11,#T_3c63c_row9_col6{
             font-size:  6pt;
             background-color:  #870000;
             color:  #f1f1f1;
-        }#T_1fc56_row6_col13{
+        }#T_3c63c_row6_col13{
             font-size:  6pt;
             background-color:  #fc8e5a;
             color:  #000000;
-        }#T_1fc56_row7_col7{
+        }#T_3c63c_row7_col7{
             font-size:  6pt;
             background-color:  #fff0dc;
             color:  #000000;
-        }#T_1fc56_row7_col8{
+        }#T_3c63c_row7_col8{
             font-size:  6pt;
             background-color:  #fdb37d;
             color:  #000000;
-        }#T_1fc56_row7_col9{
+        }#T_3c63c_row7_col9{
             font-size:  6pt;
             background-color:  #b30000;
             color:  #f1f1f1;
-        }#T_1fc56_row7_col12{
+        }#T_3c63c_row7_col12{
             font-size:  6pt;
             background-color:  #fc915c;
             color:  #000000;
-        }#T_1fc56_row8_col5{
+        }#T_3c63c_row8_col5{
             font-size:  6pt;
             background-color:  #fff1de;
             color:  #000000;
-        }#T_1fc56_row8_col7{
+        }#T_3c63c_row8_col7{
             font-size:  6pt;
             background-color:  #960000;
             color:  #f1f1f1;
-        }#T_1fc56_row8_col9,#T_1fc56_row9_col9{
+        }#T_3c63c_row8_col9,#T_3c63c_row9_col9{
             font-size:  6pt;
             background-color:  #820000;
             color:  #f1f1f1;
-        }#T_1fc56_row8_col11{
+        }#T_3c63c_row8_col11{
             font-size:  6pt;
             background-color:  #d93422;
             color:  #f1f1f1;
-        }#T_1fc56_row8_col12{
+        }#T_3c63c_row8_col12{
             font-size:  6pt;
             background-color:  #fee9ca;
             color:  #000000;
-        }#T_1fc56_row9_col5{
+        }#T_3c63c_row9_col5{
             font-size:  6pt;
             background-color:  #feefd8;
             color:  #000000;
-        }#T_1fc56_row9_col7{
+        }#T_3c63c_row9_col7{
             font-size:  6pt;
             background-color:  #840000;
             color:  #f1f1f1;
-        }#T_1fc56_row9_col12{
+        }#T_3c63c_row9_col12{
             font-size:  6pt;
             background-color:  #a10000;
             color:  #f1f1f1;
-        }#T_1fc56_row9_col13{
+        }#T_3c63c_row9_col13{
             font-size:  6pt;
             background-color:  #bc0c08;
             color:  #f1f1f1;
-        }#T_1fc56_row9_col14{
+        }#T_3c63c_row9_col14{
             font-size:  6pt;
             background-color:  #fca36e;
             color:  #000000;
-        }#T_1fc56_row9_col15{
+        }#T_3c63c_row9_col15{
             font-size:  6pt;
             background-color:  #fff6ea;
             color:  #000000;
-        }#T_1fc56_row10_col8,#T_1fc56_row10_col9{
+        }#T_3c63c_row10_col8,#T_3c63c_row10_col9{
             font-size:  6pt;
             background-color:  #fdb881;
             color:  #000000;
-        }#T_1fc56_row10_col10{
+        }#T_3c63c_row10_col10{
             font-size:  6pt;
             background-color:  #c3150e;
             color:  #f1f1f1;
         }</style>
-<table id="T_1fc56_">
+<table id="T_3c63c_">
 <thead>    <tr>        <th class="blank level0"></th>        <th class="col_heading level0 col0">0</th>        <th class="col_heading level0 col1">1</th>        <th class="col_heading level0 col2">2</th>        <th class="col_heading level0 col3">3</th>        <th class="col_heading level0 col4">4</th>        <th class="col_heading level0 col5">5</th>        <th class="col_heading level0 col6">6</th>        <th class="col_heading level0 col7">7</th>        <th class="col_heading level0 col8">8</th>        <th class="col_heading level0 col9">9</th>        <th class="col_heading level0 col10">10</th>        <th class="col_heading level0 col11">11</th>        <th class="col_heading level0 col12">12</th>        <th class="col_heading level0 col13">13</th>        <th class="col_heading level0 col14">14</th>        <th class="col_heading level0 col15">15</th>        <th class="col_heading level0 col16">16</th>        <th class="col_heading level0 col17">17</th>    </tr>
 </thead>
 <tbody>
                 <tr>
-                        <th id="T_1fc56_level0_row0" class="row_heading level0 row0">0</th>
-                        <td id="T_1fc56_row0_col0" class="data row0 col0">0</td>
-                        <td id="T_1fc56_row0_col1" class="data row0 col1">0</td>
-                        <td id="T_1fc56_row0_col2" class="data row0 col2">0</td>
-                        <td id="T_1fc56_row0_col3" class="data row0 col3">0</td>
-                        <td id="T_1fc56_row0_col4" class="data row0 col4">0</td>
-                        <td id="T_1fc56_row0_col5" class="data row0 col5">0</td>
-                        <td id="T_1fc56_row0_col6" class="data row0 col6">0</td>
-                        <td id="T_1fc56_row0_col7" class="data row0 col7">0</td>
-                        <td id="T_1fc56_row0_col8" class="data row0 col8">0</td>
-                        <td id="T_1fc56_row0_col9" class="data row0 col9">0</td>
-                        <td id="T_1fc56_row0_col10" class="data row0 col10">0</td>
-                        <td id="T_1fc56_row0_col11" class="data row0 col11">0</td>
-                        <td id="T_1fc56_row0_col12" class="data row0 col12">0</td>
-                        <td id="T_1fc56_row0_col13" class="data row0 col13">0</td>
-                        <td id="T_1fc56_row0_col14" class="data row0 col14">0</td>
-                        <td id="T_1fc56_row0_col15" class="data row0 col15">0</td>
-                        <td id="T_1fc56_row0_col16" class="data row0 col16">0</td>
-                        <td id="T_1fc56_row0_col17" class="data row0 col17">0</td>
+                        <th id="T_3c63c_level0_row0" class="row_heading level0 row0">0</th>
+                        <td id="T_3c63c_row0_col0" class="data row0 col0">0</td>
+                        <td id="T_3c63c_row0_col1" class="data row0 col1">0</td>
+                        <td id="T_3c63c_row0_col2" class="data row0 col2">0</td>
+                        <td id="T_3c63c_row0_col3" class="data row0 col3">0</td>
+                        <td id="T_3c63c_row0_col4" class="data row0 col4">0</td>
+                        <td id="T_3c63c_row0_col5" class="data row0 col5">0</td>
+                        <td id="T_3c63c_row0_col6" class="data row0 col6">0</td>
+                        <td id="T_3c63c_row0_col7" class="data row0 col7">0</td>
+                        <td id="T_3c63c_row0_col8" class="data row0 col8">0</td>
+                        <td id="T_3c63c_row0_col9" class="data row0 col9">0</td>
+                        <td id="T_3c63c_row0_col10" class="data row0 col10">0</td>
+                        <td id="T_3c63c_row0_col11" class="data row0 col11">0</td>
+                        <td id="T_3c63c_row0_col12" class="data row0 col12">0</td>
+                        <td id="T_3c63c_row0_col13" class="data row0 col13">0</td>
+                        <td id="T_3c63c_row0_col14" class="data row0 col14">0</td>
+                        <td id="T_3c63c_row0_col15" class="data row0 col15">0</td>
+                        <td id="T_3c63c_row0_col16" class="data row0 col16">0</td>
+                        <td id="T_3c63c_row0_col17" class="data row0 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_1fc56_level0_row1" class="row_heading level0 row1">1</th>
-                        <td id="T_1fc56_row1_col0" class="data row1 col0">0</td>
-                        <td id="T_1fc56_row1_col1" class="data row1 col1">0</td>
-                        <td id="T_1fc56_row1_col2" class="data row1 col2">0</td>
-                        <td id="T_1fc56_row1_col3" class="data row1 col3">0</td>
-                        <td id="T_1fc56_row1_col4" class="data row1 col4">0</td>
-                        <td id="T_1fc56_row1_col5" class="data row1 col5">29</td>
-                        <td id="T_1fc56_row1_col6" class="data row1 col6">150</td>
-                        <td id="T_1fc56_row1_col7" class="data row1 col7">195</td>
-                        <td id="T_1fc56_row1_col8" class="data row1 col8">254</td>
-                        <td id="T_1fc56_row1_col9" class="data row1 col9">255</td>
-                        <td id="T_1fc56_row1_col10" class="data row1 col10">254</td>
-                        <td id="T_1fc56_row1_col11" class="data row1 col11">176</td>
-                        <td id="T_1fc56_row1_col12" class="data row1 col12">193</td>
-                        <td id="T_1fc56_row1_col13" class="data row1 col13">150</td>
-                        <td id="T_1fc56_row1_col14" class="data row1 col14">96</td>
-                        <td id="T_1fc56_row1_col15" class="data row1 col15">0</td>
-                        <td id="T_1fc56_row1_col16" class="data row1 col16">0</td>
-                        <td id="T_1fc56_row1_col17" class="data row1 col17">0</td>
+                        <th id="T_3c63c_level0_row1" class="row_heading level0 row1">1</th>
+                        <td id="T_3c63c_row1_col0" class="data row1 col0">0</td>
+                        <td id="T_3c63c_row1_col1" class="data row1 col1">0</td>
+                        <td id="T_3c63c_row1_col2" class="data row1 col2">0</td>
+                        <td id="T_3c63c_row1_col3" class="data row1 col3">0</td>
+                        <td id="T_3c63c_row1_col4" class="data row1 col4">0</td>
+                        <td id="T_3c63c_row1_col5" class="data row1 col5">29</td>
+                        <td id="T_3c63c_row1_col6" class="data row1 col6">150</td>
+                        <td id="T_3c63c_row1_col7" class="data row1 col7">195</td>
+                        <td id="T_3c63c_row1_col8" class="data row1 col8">254</td>
+                        <td id="T_3c63c_row1_col9" class="data row1 col9">255</td>
+                        <td id="T_3c63c_row1_col10" class="data row1 col10">254</td>
+                        <td id="T_3c63c_row1_col11" class="data row1 col11">176</td>
+                        <td id="T_3c63c_row1_col12" class="data row1 col12">193</td>
+                        <td id="T_3c63c_row1_col13" class="data row1 col13">150</td>
+                        <td id="T_3c63c_row1_col14" class="data row1 col14">96</td>
+                        <td id="T_3c63c_row1_col15" class="data row1 col15">0</td>
+                        <td id="T_3c63c_row1_col16" class="data row1 col16">0</td>
+                        <td id="T_3c63c_row1_col17" class="data row1 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_1fc56_level0_row2" class="row_heading level0 row2">2</th>
-                        <td id="T_1fc56_row2_col0" class="data row2 col0">0</td>
-                        <td id="T_1fc56_row2_col1" class="data row2 col1">0</td>
-                        <td id="T_1fc56_row2_col2" class="data row2 col2">0</td>
-                        <td id="T_1fc56_row2_col3" class="data row2 col3">48</td>
-                        <td id="T_1fc56_row2_col4" class="data row2 col4">166</td>
-                        <td id="T_1fc56_row2_col5" class="data row2 col5">224</td>
-                        <td id="T_1fc56_row2_col6" class="data row2 col6">253</td>
-                        <td id="T_1fc56_row2_col7" class="data row2 col7">253</td>
-                        <td id="T_1fc56_row2_col8" class="data row2 col8">234</td>
-                        <td id="T_1fc56_row2_col9" class="data row2 col9">196</td>
-                        <td id="T_1fc56_row2_col10" class="data row2 col10">253</td>
-                        <td id="T_1fc56_row2_col11" class="data row2 col11">253</td>
-                        <td id="T_1fc56_row2_col12" class="data row2 col12">253</td>
-                        <td id="T_1fc56_row2_col13" class="data row2 col13">253</td>
-                        <td id="T_1fc56_row2_col14" class="data row2 col14">233</td>
-                        <td id="T_1fc56_row2_col15" class="data row2 col15">0</td>
-                        <td id="T_1fc56_row2_col16" class="data row2 col16">0</td>
-                        <td id="T_1fc56_row2_col17" class="data row2 col17">0</td>
+                        <th id="T_3c63c_level0_row2" class="row_heading level0 row2">2</th>
+                        <td id="T_3c63c_row2_col0" class="data row2 col0">0</td>
+                        <td id="T_3c63c_row2_col1" class="data row2 col1">0</td>
+                        <td id="T_3c63c_row2_col2" class="data row2 col2">0</td>
+                        <td id="T_3c63c_row2_col3" class="data row2 col3">48</td>
+                        <td id="T_3c63c_row2_col4" class="data row2 col4">166</td>
+                        <td id="T_3c63c_row2_col5" class="data row2 col5">224</td>
+                        <td id="T_3c63c_row2_col6" class="data row2 col6">253</td>
+                        <td id="T_3c63c_row2_col7" class="data row2 col7">253</td>
+                        <td id="T_3c63c_row2_col8" class="data row2 col8">234</td>
+                        <td id="T_3c63c_row2_col9" class="data row2 col9">196</td>
+                        <td id="T_3c63c_row2_col10" class="data row2 col10">253</td>
+                        <td id="T_3c63c_row2_col11" class="data row2 col11">253</td>
+                        <td id="T_3c63c_row2_col12" class="data row2 col12">253</td>
+                        <td id="T_3c63c_row2_col13" class="data row2 col13">253</td>
+                        <td id="T_3c63c_row2_col14" class="data row2 col14">233</td>
+                        <td id="T_3c63c_row2_col15" class="data row2 col15">0</td>
+                        <td id="T_3c63c_row2_col16" class="data row2 col16">0</td>
+                        <td id="T_3c63c_row2_col17" class="data row2 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_1fc56_level0_row3" class="row_heading level0 row3">3</th>
-                        <td id="T_1fc56_row3_col0" class="data row3 col0">0</td>
-                        <td id="T_1fc56_row3_col1" class="data row3 col1">93</td>
-                        <td id="T_1fc56_row3_col2" class="data row3 col2">244</td>
-                        <td id="T_1fc56_row3_col3" class="data row3 col3">249</td>
-                        <td id="T_1fc56_row3_col4" class="data row3 col4">253</td>
-                        <td id="T_1fc56_row3_col5" class="data row3 col5">187</td>
-                        <td id="T_1fc56_row3_col6" class="data row3 col6">46</td>
-                        <td id="T_1fc56_row3_col7" class="data row3 col7">10</td>
-                        <td id="T_1fc56_row3_col8" class="data row3 col8">8</td>
-                        <td id="T_1fc56_row3_col9" class="data row3 col9">4</td>
-                        <td id="T_1fc56_row3_col10" class="data row3 col10">10</td>
-                        <td id="T_1fc56_row3_col11" class="data row3 col11">194</td>
-                        <td id="T_1fc56_row3_col12" class="data row3 col12">253</td>
-                        <td id="T_1fc56_row3_col13" class="data row3 col13">253</td>
-                        <td id="T_1fc56_row3_col14" class="data row3 col14">233</td>
-                        <td id="T_1fc56_row3_col15" class="data row3 col15">0</td>
-                        <td id="T_1fc56_row3_col16" class="data row3 col16">0</td>
-                        <td id="T_1fc56_row3_col17" class="data row3 col17">0</td>
+                        <th id="T_3c63c_level0_row3" class="row_heading level0 row3">3</th>
+                        <td id="T_3c63c_row3_col0" class="data row3 col0">0</td>
+                        <td id="T_3c63c_row3_col1" class="data row3 col1">93</td>
+                        <td id="T_3c63c_row3_col2" class="data row3 col2">244</td>
+                        <td id="T_3c63c_row3_col3" class="data row3 col3">249</td>
+                        <td id="T_3c63c_row3_col4" class="data row3 col4">253</td>
+                        <td id="T_3c63c_row3_col5" class="data row3 col5">187</td>
+                        <td id="T_3c63c_row3_col6" class="data row3 col6">46</td>
+                        <td id="T_3c63c_row3_col7" class="data row3 col7">10</td>
+                        <td id="T_3c63c_row3_col8" class="data row3 col8">8</td>
+                        <td id="T_3c63c_row3_col9" class="data row3 col9">4</td>
+                        <td id="T_3c63c_row3_col10" class="data row3 col10">10</td>
+                        <td id="T_3c63c_row3_col11" class="data row3 col11">194</td>
+                        <td id="T_3c63c_row3_col12" class="data row3 col12">253</td>
+                        <td id="T_3c63c_row3_col13" class="data row3 col13">253</td>
+                        <td id="T_3c63c_row3_col14" class="data row3 col14">233</td>
+                        <td id="T_3c63c_row3_col15" class="data row3 col15">0</td>
+                        <td id="T_3c63c_row3_col16" class="data row3 col16">0</td>
+                        <td id="T_3c63c_row3_col17" class="data row3 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_1fc56_level0_row4" class="row_heading level0 row4">4</th>
-                        <td id="T_1fc56_row4_col0" class="data row4 col0">0</td>
-                        <td id="T_1fc56_row4_col1" class="data row4 col1">107</td>
-                        <td id="T_1fc56_row4_col2" class="data row4 col2">253</td>
-                        <td id="T_1fc56_row4_col3" class="data row4 col3">253</td>
-                        <td id="T_1fc56_row4_col4" class="data row4 col4">230</td>
-                        <td id="T_1fc56_row4_col5" class="data row4 col5">48</td>
-                        <td id="T_1fc56_row4_col6" class="data row4 col6">0</td>
-                        <td id="T_1fc56_row4_col7" class="data row4 col7">0</td>
-                        <td id="T_1fc56_row4_col8" class="data row4 col8">0</td>
-                        <td id="T_1fc56_row4_col9" class="data row4 col9">0</td>
-                        <td id="T_1fc56_row4_col10" class="data row4 col10">0</td>
-                        <td id="T_1fc56_row4_col11" class="data row4 col11">192</td>
-                        <td id="T_1fc56_row4_col12" class="data row4 col12">253</td>
-                        <td id="T_1fc56_row4_col13" class="data row4 col13">253</td>
-                        <td id="T_1fc56_row4_col14" class="data row4 col14">156</td>
-                        <td id="T_1fc56_row4_col15" class="data row4 col15">0</td>
-                        <td id="T_1fc56_row4_col16" class="data row4 col16">0</td>
-                        <td id="T_1fc56_row4_col17" class="data row4 col17">0</td>
+                        <th id="T_3c63c_level0_row4" class="row_heading level0 row4">4</th>
+                        <td id="T_3c63c_row4_col0" class="data row4 col0">0</td>
+                        <td id="T_3c63c_row4_col1" class="data row4 col1">107</td>
+                        <td id="T_3c63c_row4_col2" class="data row4 col2">253</td>
+                        <td id="T_3c63c_row4_col3" class="data row4 col3">253</td>
+                        <td id="T_3c63c_row4_col4" class="data row4 col4">230</td>
+                        <td id="T_3c63c_row4_col5" class="data row4 col5">48</td>
+                        <td id="T_3c63c_row4_col6" class="data row4 col6">0</td>
+                        <td id="T_3c63c_row4_col7" class="data row4 col7">0</td>
+                        <td id="T_3c63c_row4_col8" class="data row4 col8">0</td>
+                        <td id="T_3c63c_row4_col9" class="data row4 col9">0</td>
+                        <td id="T_3c63c_row4_col10" class="data row4 col10">0</td>
+                        <td id="T_3c63c_row4_col11" class="data row4 col11">192</td>
+                        <td id="T_3c63c_row4_col12" class="data row4 col12">253</td>
+                        <td id="T_3c63c_row4_col13" class="data row4 col13">253</td>
+                        <td id="T_3c63c_row4_col14" class="data row4 col14">156</td>
+                        <td id="T_3c63c_row4_col15" class="data row4 col15">0</td>
+                        <td id="T_3c63c_row4_col16" class="data row4 col16">0</td>
+                        <td id="T_3c63c_row4_col17" class="data row4 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_1fc56_level0_row5" class="row_heading level0 row5">5</th>
-                        <td id="T_1fc56_row5_col0" class="data row5 col0">0</td>
-                        <td id="T_1fc56_row5_col1" class="data row5 col1">3</td>
-                        <td id="T_1fc56_row5_col2" class="data row5 col2">20</td>
-                        <td id="T_1fc56_row5_col3" class="data row5 col3">20</td>
-                        <td id="T_1fc56_row5_col4" class="data row5 col4">15</td>
-                        <td id="T_1fc56_row5_col5" class="data row5 col5">0</td>
-                        <td id="T_1fc56_row5_col6" class="data row5 col6">0</td>
-                        <td id="T_1fc56_row5_col7" class="data row5 col7">0</td>
-                        <td id="T_1fc56_row5_col8" class="data row5 col8">0</td>
-                        <td id="T_1fc56_row5_col9" class="data row5 col9">0</td>
-                        <td id="T_1fc56_row5_col10" class="data row5 col10">43</td>
-                        <td id="T_1fc56_row5_col11" class="data row5 col11">224</td>
-                        <td id="T_1fc56_row5_col12" class="data row5 col12">253</td>
-                        <td id="T_1fc56_row5_col13" class="data row5 col13">245</td>
-                        <td id="T_1fc56_row5_col14" class="data row5 col14">74</td>
-                        <td id="T_1fc56_row5_col15" class="data row5 col15">0</td>
-                        <td id="T_1fc56_row5_col16" class="data row5 col16">0</td>
-                        <td id="T_1fc56_row5_col17" class="data row5 col17">0</td>
+                        <th id="T_3c63c_level0_row5" class="row_heading level0 row5">5</th>
+                        <td id="T_3c63c_row5_col0" class="data row5 col0">0</td>
+                        <td id="T_3c63c_row5_col1" class="data row5 col1">3</td>
+                        <td id="T_3c63c_row5_col2" class="data row5 col2">20</td>
+                        <td id="T_3c63c_row5_col3" class="data row5 col3">20</td>
+                        <td id="T_3c63c_row5_col4" class="data row5 col4">15</td>
+                        <td id="T_3c63c_row5_col5" class="data row5 col5">0</td>
+                        <td id="T_3c63c_row5_col6" class="data row5 col6">0</td>
+                        <td id="T_3c63c_row5_col7" class="data row5 col7">0</td>
+                        <td id="T_3c63c_row5_col8" class="data row5 col8">0</td>
+                        <td id="T_3c63c_row5_col9" class="data row5 col9">0</td>
+                        <td id="T_3c63c_row5_col10" class="data row5 col10">43</td>
+                        <td id="T_3c63c_row5_col11" class="data row5 col11">224</td>
+                        <td id="T_3c63c_row5_col12" class="data row5 col12">253</td>
+                        <td id="T_3c63c_row5_col13" class="data row5 col13">245</td>
+                        <td id="T_3c63c_row5_col14" class="data row5 col14">74</td>
+                        <td id="T_3c63c_row5_col15" class="data row5 col15">0</td>
+                        <td id="T_3c63c_row5_col16" class="data row5 col16">0</td>
+                        <td id="T_3c63c_row5_col17" class="data row5 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_1fc56_level0_row6" class="row_heading level0 row6">6</th>
-                        <td id="T_1fc56_row6_col0" class="data row6 col0">0</td>
-                        <td id="T_1fc56_row6_col1" class="data row6 col1">0</td>
-                        <td id="T_1fc56_row6_col2" class="data row6 col2">0</td>
-                        <td id="T_1fc56_row6_col3" class="data row6 col3">0</td>
-                        <td id="T_1fc56_row6_col4" class="data row6 col4">0</td>
-                        <td id="T_1fc56_row6_col5" class="data row6 col5">0</td>
-                        <td id="T_1fc56_row6_col6" class="data row6 col6">0</td>
-                        <td id="T_1fc56_row6_col7" class="data row6 col7">0</td>
-                        <td id="T_1fc56_row6_col8" class="data row6 col8">0</td>
-                        <td id="T_1fc56_row6_col9" class="data row6 col9">0</td>
-                        <td id="T_1fc56_row6_col10" class="data row6 col10">249</td>
-                        <td id="T_1fc56_row6_col11" class="data row6 col11">253</td>
-                        <td id="T_1fc56_row6_col12" class="data row6 col12">245</td>
-                        <td id="T_1fc56_row6_col13" class="data row6 col13">126</td>
-                        <td id="T_1fc56_row6_col14" class="data row6 col14">0</td>
-                        <td id="T_1fc56_row6_col15" class="data row6 col15">0</td>
-                        <td id="T_1fc56_row6_col16" class="data row6 col16">0</td>
-                        <td id="T_1fc56_row6_col17" class="data row6 col17">0</td>
+                        <th id="T_3c63c_level0_row6" class="row_heading level0 row6">6</th>
+                        <td id="T_3c63c_row6_col0" class="data row6 col0">0</td>
+                        <td id="T_3c63c_row6_col1" class="data row6 col1">0</td>
+                        <td id="T_3c63c_row6_col2" class="data row6 col2">0</td>
+                        <td id="T_3c63c_row6_col3" class="data row6 col3">0</td>
+                        <td id="T_3c63c_row6_col4" class="data row6 col4">0</td>
+                        <td id="T_3c63c_row6_col5" class="data row6 col5">0</td>
+                        <td id="T_3c63c_row6_col6" class="data row6 col6">0</td>
+                        <td id="T_3c63c_row6_col7" class="data row6 col7">0</td>
+                        <td id="T_3c63c_row6_col8" class="data row6 col8">0</td>
+                        <td id="T_3c63c_row6_col9" class="data row6 col9">0</td>
+                        <td id="T_3c63c_row6_col10" class="data row6 col10">249</td>
+                        <td id="T_3c63c_row6_col11" class="data row6 col11">253</td>
+                        <td id="T_3c63c_row6_col12" class="data row6 col12">245</td>
+                        <td id="T_3c63c_row6_col13" class="data row6 col13">126</td>
+                        <td id="T_3c63c_row6_col14" class="data row6 col14">0</td>
+                        <td id="T_3c63c_row6_col15" class="data row6 col15">0</td>
+                        <td id="T_3c63c_row6_col16" class="data row6 col16">0</td>
+                        <td id="T_3c63c_row6_col17" class="data row6 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_1fc56_level0_row7" class="row_heading level0 row7">7</th>
-                        <td id="T_1fc56_row7_col0" class="data row7 col0">0</td>
-                        <td id="T_1fc56_row7_col1" class="data row7 col1">0</td>
-                        <td id="T_1fc56_row7_col2" class="data row7 col2">0</td>
-                        <td id="T_1fc56_row7_col3" class="data row7 col3">0</td>
-                        <td id="T_1fc56_row7_col4" class="data row7 col4">0</td>
-                        <td id="T_1fc56_row7_col5" class="data row7 col5">0</td>
-                        <td id="T_1fc56_row7_col6" class="data row7 col6">0</td>
-                        <td id="T_1fc56_row7_col7" class="data row7 col7">14</td>
-                        <td id="T_1fc56_row7_col8" class="data row7 col8">101</td>
-                        <td id="T_1fc56_row7_col9" class="data row7 col9">223</td>
-                        <td id="T_1fc56_row7_col10" class="data row7 col10">253</td>
-                        <td id="T_1fc56_row7_col11" class="data row7 col11">248</td>
-                        <td id="T_1fc56_row7_col12" class="data row7 col12">124</td>
-                        <td id="T_1fc56_row7_col13" class="data row7 col13">0</td>
-                        <td id="T_1fc56_row7_col14" class="data row7 col14">0</td>
-                        <td id="T_1fc56_row7_col15" class="data row7 col15">0</td>
-                        <td id="T_1fc56_row7_col16" class="data row7 col16">0</td>
-                        <td id="T_1fc56_row7_col17" class="data row7 col17">0</td>
+                        <th id="T_3c63c_level0_row7" class="row_heading level0 row7">7</th>
+                        <td id="T_3c63c_row7_col0" class="data row7 col0">0</td>
+                        <td id="T_3c63c_row7_col1" class="data row7 col1">0</td>
+                        <td id="T_3c63c_row7_col2" class="data row7 col2">0</td>
+                        <td id="T_3c63c_row7_col3" class="data row7 col3">0</td>
+                        <td id="T_3c63c_row7_col4" class="data row7 col4">0</td>
+                        <td id="T_3c63c_row7_col5" class="data row7 col5">0</td>
+                        <td id="T_3c63c_row7_col6" class="data row7 col6">0</td>
+                        <td id="T_3c63c_row7_col7" class="data row7 col7">14</td>
+                        <td id="T_3c63c_row7_col8" class="data row7 col8">101</td>
+                        <td id="T_3c63c_row7_col9" class="data row7 col9">223</td>
+                        <td id="T_3c63c_row7_col10" class="data row7 col10">253</td>
+                        <td id="T_3c63c_row7_col11" class="data row7 col11">248</td>
+                        <td id="T_3c63c_row7_col12" class="data row7 col12">124</td>
+                        <td id="T_3c63c_row7_col13" class="data row7 col13">0</td>
+                        <td id="T_3c63c_row7_col14" class="data row7 col14">0</td>
+                        <td id="T_3c63c_row7_col15" class="data row7 col15">0</td>
+                        <td id="T_3c63c_row7_col16" class="data row7 col16">0</td>
+                        <td id="T_3c63c_row7_col17" class="data row7 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_1fc56_level0_row8" class="row_heading level0 row8">8</th>
-                        <td id="T_1fc56_row8_col0" class="data row8 col0">0</td>
-                        <td id="T_1fc56_row8_col1" class="data row8 col1">0</td>
-                        <td id="T_1fc56_row8_col2" class="data row8 col2">0</td>
-                        <td id="T_1fc56_row8_col3" class="data row8 col3">0</td>
-                        <td id="T_1fc56_row8_col4" class="data row8 col4">0</td>
-                        <td id="T_1fc56_row8_col5" class="data row8 col5">11</td>
-                        <td id="T_1fc56_row8_col6" class="data row8 col6">166</td>
-                        <td id="T_1fc56_row8_col7" class="data row8 col7">239</td>
-                        <td id="T_1fc56_row8_col8" class="data row8 col8">253</td>
-                        <td id="T_1fc56_row8_col9" class="data row8 col9">253</td>
-                        <td id="T_1fc56_row8_col10" class="data row8 col10">253</td>
-                        <td id="T_1fc56_row8_col11" class="data row8 col11">187</td>
-                        <td id="T_1fc56_row8_col12" class="data row8 col12">30</td>
-                        <td id="T_1fc56_row8_col13" class="data row8 col13">0</td>
-                        <td id="T_1fc56_row8_col14" class="data row8 col14">0</td>
-                        <td id="T_1fc56_row8_col15" class="data row8 col15">0</td>
-                        <td id="T_1fc56_row8_col16" class="data row8 col16">0</td>
-                        <td id="T_1fc56_row8_col17" class="data row8 col17">0</td>
+                        <th id="T_3c63c_level0_row8" class="row_heading level0 row8">8</th>
+                        <td id="T_3c63c_row8_col0" class="data row8 col0">0</td>
+                        <td id="T_3c63c_row8_col1" class="data row8 col1">0</td>
+                        <td id="T_3c63c_row8_col2" class="data row8 col2">0</td>
+                        <td id="T_3c63c_row8_col3" class="data row8 col3">0</td>
+                        <td id="T_3c63c_row8_col4" class="data row8 col4">0</td>
+                        <td id="T_3c63c_row8_col5" class="data row8 col5">11</td>
+                        <td id="T_3c63c_row8_col6" class="data row8 col6">166</td>
+                        <td id="T_3c63c_row8_col7" class="data row8 col7">239</td>
+                        <td id="T_3c63c_row8_col8" class="data row8 col8">253</td>
+                        <td id="T_3c63c_row8_col9" class="data row8 col9">253</td>
+                        <td id="T_3c63c_row8_col10" class="data row8 col10">253</td>
+                        <td id="T_3c63c_row8_col11" class="data row8 col11">187</td>
+                        <td id="T_3c63c_row8_col12" class="data row8 col12">30</td>
+                        <td id="T_3c63c_row8_col13" class="data row8 col13">0</td>
+                        <td id="T_3c63c_row8_col14" class="data row8 col14">0</td>
+                        <td id="T_3c63c_row8_col15" class="data row8 col15">0</td>
+                        <td id="T_3c63c_row8_col16" class="data row8 col16">0</td>
+                        <td id="T_3c63c_row8_col17" class="data row8 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_1fc56_level0_row9" class="row_heading level0 row9">9</th>
-                        <td id="T_1fc56_row9_col0" class="data row9 col0">0</td>
-                        <td id="T_1fc56_row9_col1" class="data row9 col1">0</td>
-                        <td id="T_1fc56_row9_col2" class="data row9 col2">0</td>
-                        <td id="T_1fc56_row9_col3" class="data row9 col3">0</td>
-                        <td id="T_1fc56_row9_col4" class="data row9 col4">0</td>
-                        <td id="T_1fc56_row9_col5" class="data row9 col5">16</td>
-                        <td id="T_1fc56_row9_col6" class="data row9 col6">248</td>
-                        <td id="T_1fc56_row9_col7" class="data row9 col7">250</td>
-                        <td id="T_1fc56_row9_col8" class="data row9 col8">253</td>
-                        <td id="T_1fc56_row9_col9" class="data row9 col9">253</td>
-                        <td id="T_1fc56_row9_col10" class="data row9 col10">253</td>
-                        <td id="T_1fc56_row9_col11" class="data row9 col11">253</td>
-                        <td id="T_1fc56_row9_col12" class="data row9 col12">232</td>
-                        <td id="T_1fc56_row9_col13" class="data row9 col13">213</td>
-                        <td id="T_1fc56_row9_col14" class="data row9 col14">111</td>
-                        <td id="T_1fc56_row9_col15" class="data row9 col15">2</td>
-                        <td id="T_1fc56_row9_col16" class="data row9 col16">0</td>
-                        <td id="T_1fc56_row9_col17" class="data row9 col17">0</td>
+                        <th id="T_3c63c_level0_row9" class="row_heading level0 row9">9</th>
+                        <td id="T_3c63c_row9_col0" class="data row9 col0">0</td>
+                        <td id="T_3c63c_row9_col1" class="data row9 col1">0</td>
+                        <td id="T_3c63c_row9_col2" class="data row9 col2">0</td>
+                        <td id="T_3c63c_row9_col3" class="data row9 col3">0</td>
+                        <td id="T_3c63c_row9_col4" class="data row9 col4">0</td>
+                        <td id="T_3c63c_row9_col5" class="data row9 col5">16</td>
+                        <td id="T_3c63c_row9_col6" class="data row9 col6">248</td>
+                        <td id="T_3c63c_row9_col7" class="data row9 col7">250</td>
+                        <td id="T_3c63c_row9_col8" class="data row9 col8">253</td>
+                        <td id="T_3c63c_row9_col9" class="data row9 col9">253</td>
+                        <td id="T_3c63c_row9_col10" class="data row9 col10">253</td>
+                        <td id="T_3c63c_row9_col11" class="data row9 col11">253</td>
+                        <td id="T_3c63c_row9_col12" class="data row9 col12">232</td>
+                        <td id="T_3c63c_row9_col13" class="data row9 col13">213</td>
+                        <td id="T_3c63c_row9_col14" class="data row9 col14">111</td>
+                        <td id="T_3c63c_row9_col15" class="data row9 col15">2</td>
+                        <td id="T_3c63c_row9_col16" class="data row9 col16">0</td>
+                        <td id="T_3c63c_row9_col17" class="data row9 col17">0</td>
             </tr>
             <tr>
-                        <th id="T_1fc56_level0_row10" class="row_heading level0 row10">10</th>
-                        <td id="T_1fc56_row10_col0" class="data row10 col0">0</td>
-                        <td id="T_1fc56_row10_col1" class="data row10 col1">0</td>
-                        <td id="T_1fc56_row10_col2" class="data row10 col2">0</td>
-                        <td id="T_1fc56_row10_col3" class="data row10 col3">0</td>
-                        <td id="T_1fc56_row10_col4" class="data row10 col4">0</td>
-                        <td id="T_1fc56_row10_col5" class="data row10 col5">0</td>
-                        <td id="T_1fc56_row10_col6" class="data row10 col6">0</td>
-                        <td id="T_1fc56_row10_col7" class="data row10 col7">43</td>
-                        <td id="T_1fc56_row10_col8" class="data row10 col8">98</td>
-                        <td id="T_1fc56_row10_col9" class="data row10 col9">98</td>
-                        <td id="T_1fc56_row10_col10" class="data row10 col10">208</td>
-                        <td id="T_1fc56_row10_col11" class="data row10 col11">253</td>
-                        <td id="T_1fc56_row10_col12" class="data row10 col12">253</td>
-                        <td id="T_1fc56_row10_col13" class="data row10 col13">253</td>
-                        <td id="T_1fc56_row10_col14" class="data row10 col14">253</td>
-                        <td id="T_1fc56_row10_col15" class="data row10 col15">187</td>
-                        <td id="T_1fc56_row10_col16" class="data row10 col16">22</td>
-                        <td id="T_1fc56_row10_col17" class="data row10 col17">0</td>
+                        <th id="T_3c63c_level0_row10" class="row_heading level0 row10">10</th>
+                        <td id="T_3c63c_row10_col0" class="data row10 col0">0</td>
+                        <td id="T_3c63c_row10_col1" class="data row10 col1">0</td>
+                        <td id="T_3c63c_row10_col2" class="data row10 col2">0</td>
+                        <td id="T_3c63c_row10_col3" class="data row10 col3">0</td>
+                        <td id="T_3c63c_row10_col4" class="data row10 col4">0</td>
+                        <td id="T_3c63c_row10_col5" class="data row10 col5">0</td>
+                        <td id="T_3c63c_row10_col6" class="data row10 col6">0</td>
+                        <td id="T_3c63c_row10_col7" class="data row10 col7">43</td>
+                        <td id="T_3c63c_row10_col8" class="data row10 col8">98</td>
+                        <td id="T_3c63c_row10_col9" class="data row10 col9">98</td>
+                        <td id="T_3c63c_row10_col10" class="data row10 col10">208</td>
+                        <td id="T_3c63c_row10_col11" class="data row10 col11">253</td>
+                        <td id="T_3c63c_row10_col12" class="data row10 col12">253</td>
+                        <td id="T_3c63c_row10_col13" class="data row10 col13">253</td>
+                        <td id="T_3c63c_row10_col14" class="data row10 col14">253</td>
+                        <td id="T_3c63c_row10_col15" class="data row10 col15">187</td>
+                        <td id="T_3c63c_row10_col16" class="data row10 col16">22</td>
+                        <td id="T_3c63c_row10_col17" class="data row10 col17">0</td>
             </tr>
     </tbody>
 </table>
@@ -1732,8 +1758,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Mean-of-threes-and-sevens-out-ideal-3-and-7-for-baseline-study.">
-<a class="anchor" href="#Mean-of-threes-and-sevens-out-ideal-3-and-7-for-baseline-study." aria-hidden="true"><span class="octicon octicon-link"></span></a>Mean of threes and sevens out ideal 3 and 7 for baseline study.<a class="anchor-link" href="#Mean-of-threes-and-sevens-out-ideal-3-and-7-for-baseline-study."> </a>
+<h3 id="Mean-of-threes-and-sevens-our-ideal-3-and-7.">
+<a class="anchor" href="#Mean-of-threes-and-sevens-our-ideal-3-and-7." aria-hidden="true"><span class="octicon octicon-link"></span></a>Mean of threes and sevens our ideal 3 and 7.<a class="anchor-link" href="#Mean-of-threes-and-sevens-our-ideal-3-and-7."> </a>
 </h3>
 </div>
 </div>
@@ -2333,8 +2359,8 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Manual-distance-function">
-<a class="anchor" href="#Manual-distance-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>Manual distance function<a class="anchor-link" href="#Manual-distance-function"> </a>
+<h3 id="Manual-L1-distance-function">
+<a class="anchor" href="#Manual-L1-distance-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>Manual L1 distance function<a class="anchor-link" href="#Manual-L1-distance-function"> </a>
 </h3>
 </div>
 </div>
@@ -2829,15 +2855,6 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/niyazi/anaconda3/envs/fastbook/lib/python3.8/site-packages/fastbook/__init__.py:73: UserWarning: Not providing a value for linspace's steps is deprecated and will throw a runtime error in a future release. This warning will appear only once per process. (Triggered internally at  /opt/conda/conda-bld/pytorch_1623448278899/work/aten/src/ATen/native/RangeFactories.cpp:25.)
-  x = torch.linspace(min,max)
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
 
 
 <div class="output_png output_subarea ">
@@ -2877,16 +2894,16 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="How-to-calculate-gradient:">
+<h3 id="How-to-calculate-gradient:">
 <a class="anchor" href="#How-to-calculate-gradient:" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to calculate gradient:<a class="anchor-link" href="#How-to-calculate-gradient:"> </a>
-</h4>
+</h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now our tensor xt is under investigation. Pytorch will keeps its eye on it.</p>
+<p><strong>Now our tensor xt is under investigation. Pytorch will keeps its eye on it.</strong></p>
 
 </div>
 </div>
@@ -2945,7 +2962,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Result is 9 but there is a grad function in the result</p>
+<p><strong>Result is 9 but there is a grad function in the result.</strong></p>
 <hr>
 
 </div>
@@ -3172,9 +3189,9 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="End-to-end-SGD-example">
+<h3 id="End-to-end-SGD-example">
 <a class="anchor" href="#End-to-end-SGD-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>End to end SGD example<a class="anchor-link" href="#End-to-end-SGD-example"> </a>
-</h4>
+</h3>
 </div>
 </div>
 </div>
@@ -3235,7 +3252,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.collections.PathCollection at 0x7f8281d1f940&gt;</pre>
+<pre>&lt;matplotlib.collections.PathCollection at 0x7f8f2f35c730&gt;</pre>
 </div>
 
 </div>
@@ -3245,7 +3262,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,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%0A">
+<img src="data:image/png;base64,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%0A">
 </div>
 
 </div>
@@ -3319,8 +3336,9 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Step 1: here are initial random parameters:</strong></p>
-
+<h4 id="Step-1:-here-are-initial-random-parameters:">
+<a class="anchor" href="#Step-1:-here-are-initial-random-parameters:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 1: here are initial random parameters:<a class="anchor-link" href="#Step-1:-here-are-initial-random-parameters:"> </a>
+</h4>
 </div>
 </div>
 </div>
@@ -3347,7 +3365,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>tensor([-0.7658, -0.7506,  1.3525], requires_grad=True)</pre>
+<pre>tensor([ 0.2303, -0.3278,  0.7950], requires_grad=True)</pre>
 </div>
 
 </div>
@@ -3361,8 +3379,9 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Step 2: calculate predictions:</strong></p>
-
+<h4 id="Step-2:-calculate-predictions:">
+<a class="anchor" href="#Step-2:-calculate-predictions:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 2: calculate predictions:<a class="anchor-link" href="#Step-2:-calculate-predictions:"> </a>
+</h4>
 </div>
 </div>
 </div>
@@ -3440,8 +3459,9 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Step 3: Calculate the loss</strong></p>
-
+<h4 id="Step-3:-Calculate-the-loss">
+<a class="anchor" href="#Step-3:-Calculate-the-loss" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 3: Calculate the loss<a class="anchor-link" href="#Step-3:-Calculate-the-loss"> </a>
+</h4>
 </div>
 </div>
 </div>
@@ -3468,7 +3488,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>tensor(160.6979, grad_fn=&lt;SqrtBackward&gt;)</pre>
+<pre>tensor(28.5905, grad_fn=&lt;SqrtBackward&gt;)</pre>
 </div>
 
 </div>
@@ -3491,8 +3511,9 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>first we calculate the gradient</strong></p>
-
+<h4 id="Step-4:-first-we-calculate-the-gradient:">
+<a class="anchor" href="#Step-4:-first-we-calculate-the-gradient:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 4: first we calculate the gradient:<a class="anchor-link" href="#Step-4:-first-we-calculate-the-gradient:"> </a>
+</h4>
 </div>
 </div>
 </div>
@@ -3527,7 +3548,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>tensor([-165.5151,  -10.6402,   -0.7900])</pre>
+<pre>tensor([7.8994e+01, 5.1663e+00, 4.5350e-02])</pre>
 </div>
 
 </div>
@@ -3560,7 +3581,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>tensor([-1.6552e-03, -1.0640e-04, -7.8996e-06])</pre>
+<pre>tensor([7.8994e-04, 5.1663e-05, 4.5350e-07])</pre>
 </div>
 
 </div>
@@ -3593,7 +3614,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>tensor([-0.7658, -0.7506,  1.3525], requires_grad=True)</pre>
+<pre>tensor([ 0.2303, -0.3278,  0.7950], requires_grad=True)</pre>
 </div>
 
 </div>
@@ -3608,8 +3629,9 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<p><strong>Step 5: Step the weight.</strong></p>
-
+<h4 id="Step-5:-Step-the-weight.__">
+<a class="anchor" href="#Step-5:-Step-the-weight.__" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 5: Step the weight.__<a class="anchor-link" href="#Step-5:-Step-the-weight.__"> </a>
+</h4>
 </div>
 </div>
 </div>
@@ -3663,7 +3685,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>tensor(160.4228, grad_fn=&lt;SqrtBackward&gt;)</pre>
+<pre>tensor(28.5281, grad_fn=&lt;SqrtBackward&gt;)</pre>
 </div>
 
 </div>
@@ -3709,8 +3731,9 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Step 6: repeat the steps</strong></p>
-
+<h4 id="Step-6:-repeat-the-step:">
+<a class="anchor" href="#Step-6:-repeat-the-step:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 6: repeat the step:<a class="anchor-link" href="#Step-6:-repeat-the-step:"> </a>
+</h4>
 </div>
 </div>
 </div>
@@ -3734,16 +3757,16 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>160.42279052734375
-160.14772033691406
-159.87269592285156
-159.59768676757812
-159.3227081298828
-159.04774475097656
-158.7728271484375
-158.4979248046875
-158.22305297851562
-157.9481964111328
+<pre>28.5280818939209
+28.466617584228516
+28.40610694885254
+28.346538543701172
+28.287904739379883
+28.23019790649414
+28.173402786254883
+28.11751937866211
+28.062532424926758
+28.00843620300293
 </pre>
 </div>
 </div>
@@ -3778,7 +3801,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,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%0A">
+<img src="data:image/png;base64,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%0A">
 </div>
 
 </div>
@@ -3793,8 +3816,17 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="Now-create-a-loss-function-for-out-3-and-7-recognizer.-Currently-we-use-metric-not-loss">
-<a class="anchor" href="#Now-create-a-loss-function-for-out-3-and-7-recognizer.-Currently-we-use-metric-not-loss" aria-hidden="true"><span class="octicon octicon-link"></span></a>Now create a loss function for out 3 and 7 recognizer. Currently we use metric not loss<a class="anchor-link" href="#Now-create-a-loss-function-for-out-3-and-7-recognizer.-Currently-we-use-metric-not-loss"> </a>
+<h2 id="MNIST">
+<a class="anchor" href="#MNIST" aria-hidden="true"><span class="octicon octicon-link"></span></a>MNIST<a class="anchor-link" href="#MNIST"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Loss-Function-our-3-and-7-recognizer.-Currently-we-use-metric-not-loss">
+<a class="anchor" href="#Loss-Function-our-3-and-7-recognizer.-Currently-we-use-metric-not-loss" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loss Function our 3 and 7 recognizer. Currently we use metric not loss<a class="anchor-link" href="#Loss-Function-our-3-and-7-recognizer.-Currently-we-use-metric-not-loss"> </a>
 </h3>
 </div>
 </div>
@@ -4283,6 +4315,15 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="How-unsqueeze-works?">
+<a class="anchor" href="#How-unsqueeze-works?" aria-hidden="true"><span class="octicon octicon-link"></span></a>How unsqueeze works?<a class="anchor-link" href="#How-unsqueeze-works?"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash flash-error">
     <svg class="octicon octicon-alert octicon octicon-alert octicon octicon-alert" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg>
@@ -4582,7 +4623,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>tensor([0.6863], requires_grad=True)</pre>
+<pre>tensor([-0.4708], requires_grad=True)</pre>
 </div>
 
 </div>
@@ -4623,7 +4664,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>tensor([20.2336], grad_fn=&lt;AddBackward0&gt;)</pre>
+<pre>tensor([8.4957], grad_fn=&lt;AddBackward0&gt;)</pre>
 </div>
 
 </div>
@@ -4666,13 +4707,13 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>tensor([[20.2336],
-        [17.0644],
-        [15.2384],
+<pre>tensor([[ -6.6780],
+        [ -8.7128],
+        [ -7.3242],
         ...,
-        [18.3804],
-        [23.8567],
-        [28.6816]], grad_fn=&lt;AddBackward0&gt;)</pre>
+        [ 12.8726],
+        [-10.3312],
+        [ 17.9571]], grad_fn=&lt;AddBackward0&gt;)</pre>
 </div>
 
 </div>
@@ -4714,12 +4755,12 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>tensor([[ True],
-        [ True],
-        [ True],
+<pre>tensor([[False],
+        [False],
+        [False],
         ...,
         [False],
-        [False],
+        [ True],
         [False]])</pre>
 </div>
 
@@ -4762,7 +4803,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.49080348014831543</pre>
+<pre>0.3622942864894867</pre>
 </div>
 
 </div>
@@ -5037,9 +5078,9 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[tensor([ 3, 12,  8, 10,  2]),
- tensor([ 9,  4,  7, 14,  5]),
- tensor([ 1, 13,  0,  6, 11])]</pre>
+<pre>[tensor([ 3,  2, 10,  9, 13]),
+ tensor([14,  6,  8,  0,  1]),
+ tensor([ 7,  4,  5, 12, 11])]</pre>
 </div>
 
 </div>
@@ -5095,6 +5136,15 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="DataLoader">
+<a class="anchor" href="#DataLoader" aria-hidden="true"><span class="octicon octicon-link"></span></a>DataLoader<a class="anchor-link" href="#DataLoader"> </a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>then put it into a Dataloader.</strong></p>
 
 </div>
@@ -5123,11 +5173,11 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[(tensor([17, 18, 10, 22,  8, 14]), ('r', 's', 'k', 'w', 'i', 'o')),
- (tensor([20, 15,  9, 13, 21, 12]), ('u', 'p', 'j', 'n', 'v', 'm')),
- (tensor([ 7, 25,  6,  5, 11, 23]), ('h', 'z', 'g', 'f', 'l', 'x')),
- (tensor([ 1,  3,  0, 24, 19, 16]), ('b', 'd', 'a', 'y', 't', 'q')),
- (tensor([2, 4]), ('c', 'e'))]</pre>
+<pre>[(tensor([ 3, 16, 17,  8,  7,  2]), ('d', 'q', 'r', 'i', 'h', 'c')),
+ (tensor([10, 22,  4, 14, 25, 15]), ('k', 'w', 'e', 'o', 'z', 'p')),
+ (tensor([ 1, 12, 19,  5,  9, 11]), ('b', 'm', 't', 'f', 'j', 'l')),
+ (tensor([ 0, 23, 21, 13, 18, 20]), ('a', 'x', 'v', 'n', 's', 'u')),
+ (tensor([ 6, 24]), ('g', 'y'))]</pre>
 </div>
 
 </div>
@@ -5312,10 +5362,10 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>tensor([[-2.1876],
-        [-8.3973],
-        [ 2.5000],
-        [-4.9473]], grad_fn=&lt;AddBackward0&gt;)</pre>
+<pre>tensor([[-13.8845],
+        [  0.7855],
+        [ -1.1805],
+        [  4.6933]], grad_fn=&lt;AddBackward0&gt;)</pre>
 </div>
 
 </div>
@@ -5357,7 +5407,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>tensor(0.7419, grad_fn=&lt;MeanBackward0&gt;)</pre>
+<pre>tensor(0.5218, grad_fn=&lt;MeanBackward0&gt;)</pre>
 </div>
 
 </div>
@@ -5399,7 +5449,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(torch.Size([784, 1]), tensor(-0.0061), tensor([-0.0420]))</pre>
+<pre>(torch.Size([784, 1]), tensor(-0.0145), tensor([-0.1010]))</pre>
 </div>
 
 </div>
@@ -5470,7 +5520,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(tensor(-0.0121), tensor([-0.0840]))</pre>
+<pre>(tensor(-0.0290), tensor([-0.2019]))</pre>
 </div>
 
 </div>
@@ -5516,7 +5566,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(tensor(-0.0182), tensor([-0.1260]))</pre>
+<pre>(tensor(-0.0435), tensor([-0.3029]))</pre>
 </div>
 
 </div>
@@ -5598,9 +5648,9 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 <div class="output_text output_subarea output_execute_result">
 <pre>tensor([[False],
-        [False],
         [ True],
-        [False]])</pre>
+        [False],
+        [ True]])</pre>
 </div>
 
 </div>
@@ -5662,7 +5712,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>tensor(0.2500)</pre>
+<pre>tensor(0.5000)</pre>
 </div>
 
 </div>
@@ -5722,7 +5772,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.5263</pre>
+<pre>0.721</pre>
 </div>
 
 </div>
@@ -5733,6 +5783,15 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Training">
+<a class="anchor" href="#Training" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training<a class="anchor-link" href="#Training"> </a>
+</h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -5766,7 +5825,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.6664</pre>
+<pre>0.7905</pre>
 </div>
 
 </div>
@@ -5807,7 +5866,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0.8266 0.8901 0.9183 0.9276 0.9398 0.9467 0.9506 0.9525 0.956 0.9579 0.9599 0.9609 0.9613 0.9618 0.9633 0.9638 0.9648 0.9657 0.9672 0.9677 </pre>
+<pre>0.9067 0.9369 0.9457 0.9496 0.9559 0.9589 0.9608 0.9633 0.9652 0.9667 0.9677 0.9687 0.9686 0.9701 0.9711 0.9711 0.9716 0.9726 0.9735 0.973 </pre>
 </div>
 </div>
 
@@ -5820,9 +5879,9 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="OPTIMIZER">
+<h3 id="OPTIMIZER">
 <a class="anchor" href="#OPTIMIZER" aria-hidden="true"><span class="octicon octicon-link"></span></a>OPTIMIZER<a class="anchor-link" href="#OPTIMIZER"> </a>
-</h2>
+</h3>
 </div>
 </div>
 </div>
@@ -6001,7 +6060,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.9785</pre>
+<pre>0.4681</pre>
 </div>
 
 </div>
@@ -6052,7 +6111,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0.9795 0.9795 0.9795 0.979 0.9795 0.9795 0.98 0.98 0.9804 0.9814 0.9814 0.9814 0.9814 0.9819 0.9814 0.9814 0.9814 0.9814 0.9814 0.9814 </pre>
+<pre>0.4932 0.8394 0.8408 0.9136 0.9336 0.9468 0.9565 0.9629 0.9663 0.9678 0.9697 0.9712 0.9736 0.9746 0.9761 0.977 0.9775 0.978 0.9785 0.9785 </pre>
 </div>
 </div>
 
@@ -6062,6 +6121,15 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Fastai's-SDG-class">
+<a class="anchor" href="#Fastai's-SDG-class" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fastai's SDG class<a class="anchor-link" href="#Fastai's-SDG-class"> </a>
+</h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -6092,7 +6160,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0.4932 0.8618 0.8384 0.9146 0.935 0.9482 0.9575 0.9629 0.9663 0.9687 0.9702 0.9726 0.9736 0.9746 0.9761 0.9761 0.9775 0.978 0.9785 0.9785 </pre>
+<pre>0.4932 0.9009 0.813 0.9072 0.9306 0.9453 0.9546 0.9624 0.9653 0.9678 0.9692 0.9712 0.9726 0.9746 0.9761 0.9765 0.978 0.9785 0.9785 0.9785 </pre>
 </div>
 </div>
 
@@ -6107,6 +6175,15 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Just remove the "train_model" at this time and use fastai's "Learner.fit" Before using Learner first we need to pass our trainig and validation data into "Dataloaders" not "dataloader"</strong></p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Fastai's-Dataloaders">
+<a class="anchor" href="#Fastai's-Dataloaders" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fastai's Dataloaders<a class="anchor-link" href="#Fastai's-Dataloaders"> </a>
+</h4>
 </div>
 </div>
 </div>
@@ -6148,8 +6225,9 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>fit</strong></p>
-
+<h4 id="FastAi's-Fit">
+<a class="anchor" href="#FastAi's-Fit" aria-hidden="true"><span class="octicon octicon-link"></span></a>FastAi's Fit<a class="anchor-link" href="#FastAi's-Fit"> </a>
+</h4>
 </div>
 </div>
 </div>
@@ -6187,71 +6265,71 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
   <tbody>
     <tr>
       <td>0</td>
-      <td>0.637393</td>
-      <td>0.503039</td>
+      <td>0.636822</td>
+      <td>0.503491</td>
       <td>0.495584</td>
       <td>00:00</td>
     </tr>
     <tr>
       <td>1</td>
-      <td>0.419458</td>
-      <td>0.258461</td>
-      <td>0.760059</td>
+      <td>0.526316</td>
+      <td>0.200708</td>
+      <td>0.825810</td>
       <td>00:00</td>
     </tr>
     <tr>
       <td>2</td>
-      <td>0.158017</td>
-      <td>0.166715</td>
-      <td>0.850343</td>
+      <td>0.193482</td>
+      <td>0.175509</td>
+      <td>0.842002</td>
       <td>00:00</td>
     </tr>
     <tr>
       <td>3</td>
-      <td>0.071560</td>
-      <td>0.102341</td>
-      <td>0.916094</td>
+      <td>0.084752</td>
+      <td>0.105641</td>
+      <td>0.912659</td>
       <td>00:00</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>0.039586</td>
-      <td>0.075738</td>
-      <td>0.934740</td>
+      <td>0.044736</td>
+      <td>0.077531</td>
+      <td>0.933268</td>
       <td>00:00</td>
     </tr>
     <tr>
       <td>5</td>
-      <td>0.026984</td>
-      <td>0.061074</td>
-      <td>0.948479</td>
+      <td>0.029116</td>
+      <td>0.062228</td>
+      <td>0.947498</td>
       <td>00:00</td>
     </tr>
     <tr>
       <td>6</td>
-      <td>0.021725</td>
-      <td>0.051876</td>
+      <td>0.022705</td>
+      <td>0.052672</td>
       <td>0.955348</td>
       <td>00:00</td>
     </tr>
     <tr>
       <td>7</td>
-      <td>0.019331</td>
-      <td>0.045730</td>
-      <td>0.962709</td>
+      <td>0.019858</td>
+      <td>0.046304</td>
+      <td>0.961727</td>
       <td>00:00</td>
     </tr>
     <tr>
       <td>8</td>
-      <td>0.018079</td>
-      <td>0.041392</td>
-      <td>0.966143</td>
+      <td>0.018413</td>
+      <td>0.041820</td>
+      <td>0.965162</td>
       <td>00:00</td>
     </tr>
     <tr>
       <td>9</td>
-      <td>0.017304</td>
-      <td>0.038182</td>
+      <td>0.017542</td>
+      <td>0.038510</td>
       <td>0.967125</td>
       <td>00:00</td>
     </tr>
@@ -6270,9 +6348,9 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Adding-a-Nonlinearity">
+<h3 id="Adding-a-Nonlinearity">
 <a class="anchor" href="#Adding-a-Nonlinearity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adding a Nonlinearity<a class="anchor-link" href="#Adding-a-Nonlinearity"> </a>
-</h2>
+</h3>
 </div>
 </div>
 </div>
@@ -6351,8 +6429,9 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>recorder is a fast ai method</strong></p>
-
+<h4 id="recorder-is-a-fast-ai-method">
+<a class="anchor" href="#recorder-is-a-fast-ai-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>recorder is a fast ai method<a class="anchor-link" href="#recorder-is-a-fast-ai-method"> </a>
+</h4>
 </div>
 </div>
 </div>
@@ -6378,7 +6457,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXcAAAD9CAYAAABHnDf0AAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjQuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8rg+JYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAZ6ElEQVR4nO3dfXDcV33v8fdXu1o9WrZlKzFJcJw4T2BKHlBL29SltIW0lDaB3NtJnQaYeyGDc2kZ6L23TIe0JnTKtLczvX1IQzPNEEhaF5omEBoeOlNCk5RJQebi5qqAwQ6OAyGSI1vSSivtg77947eSV+uV9LO88m91fp/XjEbSb49WXx/LHx+d39lzzN0REZGwtCVdgIiINJ/CXUQkQAp3EZEAKdxFRAKkcBcRCZDCXUQkQAp3EZEAZeM0MrP3AO8AfgTY7+7vWKbt+4DfBrqBh4C97j673PNv3brVd+zYEa9iEREB4MCBA8fdfaDRY7HCHfgB8PvADUDXUo3M7AbgA8DPVr/mEeBD1WtL2rFjB0NDQzFLERERADM7utRjsaZl3P1hd/808NIKTd8O3Ofuw+5+Avgw0YhfRETOoWbPue8CDtZ8fhA438y21Dc0s9vNbMjMhkZHR5tchohIujU73HuB8ZrP5z/eUN/Q3e9190F3HxwYaDhlJCIiq9TscM8DfTWfz3882eTvIyIiy2h2uA8DV9d8fjXworuvNFcvIiJNFCvczSxrZp1ABsiYWaeZNVpp8wngv5vZK81sE/BB4P5mFSsiIvHEHbl/ECgQLWn89erHHzSz7WaWN7PtAO7+BeCPgMeB54CjwO81vWoREVmWtcJhHYODg6517iKtpVyZo1RxiuU5ZisVlosKdyiUKuRnyuRny0zNRu/nP54qVlj2CczIZYz2TBu5bPTWnmmjI9tGLtNGps0ws+b/IQF3j/6clQqlsjNbmaNYnqNUfV+uzK3J9503uKOfn75idYtKzOyAuw82eizui5hEUsndyc+WOTFVYmy6yHihxNxaDYgcynO+ECrF8hzFyuL3pbrPF64tXHeK5Ur1ui9qW55bPqQqc0RfW20/1+Q/5nLZ3AJjzGWt0f8rALz7dTtXHe7LUbjLuuHuzJbnmC0tH1Lludpgq1As+6JwnC5WyM+WyM9WohFm3WjzxHSRk9MlxqaKnJguUqq0TvKYQW5+dFs3yq293p3LVq8buWyGXKaNbJstG1JmFo2Ua567diSdWSHhunJt9OSy9HZm6e3I0tORZUP1fVd7hra2pb9+fvR82n9e1feVZv9PU2fxbwxGRyaz8HE2sz634FK4S1OVq6PI6WIUnJMz87+Wz38cXZ8pVShV5pitzFEqezWEo1CeLVcWgnfhOYrRx2sRtGbQWw2lno4sm7vb2d7fzTUv38Tmnhz93bnofU87G7vaaVvDYVy2ra0mlE8P2uwaTk8kyczIZaM/c09H0tWEQeGeUrPlCjOlJX7Vr8xRKFY4MV3kxFSRsakSJ6aLCyPZsaki+dnywtfO1kwPnOkAa9EINNNGe9bIZdro7YjCdktP98LHPR3RiLCzPcNy8dZmRKPVhXCsBmUmQ3vG6M5l6enILDxvV3smyMCUdFO4B6pUmeMHJwscGytw7MQ0z41Nc2z+7USBsaniGT1fX2eW/p5oBLutr5PezuyiaYHFAd1Gdy5z2q/ovR3zH2foyEZBq1AVWRsK9xY2W64sTGPk61Yf5GfKjBeieeHaEfWJ6lzxeKG06LmybcaFm7vY3t/NDRds5MJNnXTlsqdGtXXztp3tmSjMu3Ns6m6nfZ3OO4qklcJ9Dbl7tDxsNpprrr9xNzlTajjlcWKqyNh0kZkVbhxCNK2xpRrC/T05LtzcTX93O5t7clywqYuXb+5m+5ZutvV1klnmhpaIhEXhvgZ+OD7Dn33pOzx04HmK5ZUDun7K4xUv66O/J0df/ZRGzbxzT0eWTV3tdOc0Xywip1O4N9FL+Vnu+fJhPvH0Udydt1x7IZcO9FYDOUNvR/upG3nVsN7cndOUh4g0ncK9CSZmSvz1E0e476lnKZQqvPW6i3jvz13Oy/u7ky5NRFJK4X4WCsUK93/le3z0Xw4zXijxSz/yMt73hiu47LzepEsTkZRTuK/SV58d4zf2f50XJ2Z5/ZUD/NYbr+RVF25MuiwREUDhvioPPn2UfY8Os72/m4fefR2DO/qTLklEZBGF+xkoluf4vUeH2f/V53j9lQP831uuZWNXe9JliYicRuEe08jkDHsf/DoHjp7gf7x+J+9/w5VaNy4iLUvhHsM3jp3k3Q8cYLxQ4i/2XMubX31B0iWJiCxL4b6Chw48z+888gznbejgH/b+JK+8oG/lLxIRSZjCfRkf+dw3+asnjvATl27h7luvo78nl3RJIiKxKNyX8NCB5/mrJ46w57Xb+dCv7NKrSEVkXVG4N/DdkTx3fvr/89pL+vnwja/SjVMRWXc0HK0zU6rwnr/9Ol25DH96y7UKdhFZlzRyr/P7j/0H3/rhJB97x4+ybWNn0uWIiKyKRu41Pv/MCzz49HO8a/clvP6q85IuR0Rk1RTuVcfGpvnf//DvXP3yTfyvG65KuhwRkbOicCc6b/Q39v8/cPjzW64ll1W3iMj6pjl34I+/+G2+cewkd++5ju1btAe7iKx/qR+iPv7tkYX17L/06pclXY6ISFOkOtxfnJjhtz51kKu2beB33/zKpMsREWmaVIf7H3zumxSKFf5iz7V0tmeSLkdEpGlSHe7fOHaSn73qPC47b0PSpYiINFVqw322XOHY2DQ7dd6piAQoteF+9KVp5hx2DvQkXYqISNPFCncz6zezR8xsysyOmtmeJdptMrOPm9lI9W1fU6ttosMjeQB2DmjkLiLhibvO/W6gCJwPXAM8ZmYH3X24rt2fAN3ADuA84J/N7Ki7f6w55TbP4dEo3C/VyF1EArTiyN3MeoCbgTvdPe/uTwGPArc1aP7LwB+5+7S7fw+4D/hvTay3aQ6PTnHhpi66c3odl4iEJ860zBVA2d0P1Vw7COxaor3Vffyqho3MbjezITMbGh0djVVsMx0ezWvULiLBihPuvcBE3bVxoNH6wS8AHzCzDWZ2GdGoveHr+d39XncfdPfBgYGBM6n5rLk7h0fymm8XkWDFCfc8UH8qdB8w2aDtbwIF4DvAZ4D9wPNnU+BaeHFilqliRStlRCRYccL9EJA1s8trrl0N1N9Mxd3H3P1Wd9/m7ruqz//V5pTaPPM3UzVyF5FQrXg30d2nzOxh4C4zeyfRapkbgZ+sb2tmO4GT1bc3ArcDr2teuc2xEO56AZOIBCrui5juALqAEaKplr3uPmxmu80sX9PuNcAzRFM2HwFubbBcMnGHR/L0dmQ5b0NH0qWIiKyJWOsA3X0MuKnB9SeJbrjOf/4p4FPNKm6tHB6dYudAD2Y6/FpEwpTK7QcOj2qljIiELXXhnp8t88L4jObbRSRoqQv3Z0enAG0YJiJhS124axmkiKRB6sL9yGieTJvpIGwRCVrqwv3w6BTb+7vpyOpYPREJVwrDPa/5dhEJXqrCvTLnHDk+pfl2EQleqsL9+ycKFMtz2upXRIKXqnDXShkRSQuFu4hIgFIX7v09OTb35JIuRURkTaUr3EemtFJGRFIhXeGuDcNEJCVSE+4npoq8NFVUuItIKqQm3I8cnz99SdMyIhK+1IT74ZH53SA1cheR8KUn3Efz5DJtXLRZG4aJSPhSFe6XbO0h06aj9UQkfKkJ9yOjU5pvF5HUSEW4F8tzHB2b1ny7iKRGKsL9ubEpKnOucBeR1EhFuH9XK2VEJGVSEe7zG4Zdoq0HRCQlUhPu2/o66e3IJl2KiMg5kZJw10oZEUmX4MPd3Tkyog3DRCRdgg/30clZJmfLCncRSZXgw/27On1JRFIo+HA/PFpdBqk5dxFJkfDDfSRPdy7Dtr7OpEsRETlnYoW7mfWb2SNmNmVmR81szxLtOszso2b2opmNmdlnzezC5pZ8ZuZPXzLThmEikh5xR+53A0XgfOBW4B4z29Wg3XuBnwBeDVwAnAD+vAl1rtqRUZ2bKiLps2K4m1kPcDNwp7vn3f0p4FHgtgbNLwG+6O4vuvsM8Emg0X8C58R0scz3TxZ0M1VEUifOyP0KoOzuh2quHaRxaN8HXG9mF5hZN9Eo//ONntTMbjezITMbGh0dPdO6YzmycDNV4S4i6RIn3HuBibpr48CGBm2/AxwDvl/9mlcAdzV6Une/190H3X1wYGAgfsVn4MhxbRgmIukUJ9zzQF/dtT5gskHbu4EOYAvQAzzMEiP3c+HIaB4zuHiLjtYTkXSJE+6HgKyZXV5z7WpguEHba4D73X3M3WeJbqb+mJltPetKV+GlfJGNXe10tmeS+PYiIolZMdzdfYpoBH6XmfWY2fXAjcADDZp/DXibmW00s3bgDuAH7n68mUXHNV4osbGrPYlvLSKSqLhLIe8AuoARYD+w192HzWy3meVr2v1PYIZo7n0UeBPwlibWe0YU7iKSVrE2OHf3MeCmBtefJLrhOv/5S0QrZFqCwl1E0iro7QcmZkr0KdxFJIXCDvdCib5OhbuIpE+w4e7umpYRkdQKNtwLpQqliivcRSSVgg33iUIZQOEuIqkUbLiPF0oA9HXFWhAkIhKU4MNdI3cRSSOFu4hIgIIN9wmFu4ikWLDhvjDnrnXuIpJC4Ye7Ru4ikkJBh/uGjiyZNh2MLSLpE2y4TxS0r4yIpFe44a5Nw0QkxYIN92hfGb2ASUTSKfBw18hdRNJJ4S4iEqBgw32iUFa4i0hqBRnuxfIchVJFL2ASkdQKMtwX9pXpVriLSDqFHe6alhGRlAoy3CdmtPWAiKRbkOGuTcNEJO2CDHdt9ysiaRdkuGvOXUTSLshwn9D5qSKSckGG+3ihRGd7Gx3ZTNKliIgkIthw15SMiKSZwl1EJEBBhrv2lRGRtAsy3McLJa1xF5FUCzbcNXIXkTSLFe5m1m9mj5jZlJkdNbM9S7T7vJnla96KZvZMc0temc5PFZG0i7sQ/G6gCJwPXAM8ZmYH3X24tpG7/2Lt52b2ZeBLZ19mfJU5Z3JWc+4ikm4rjtzNrAe4GbjT3fPu/hTwKHDbCl+3A9gNfKIJdcY2OaNXp4qIxJmWuQIou/uhmmsHgV0rfN3bgCfd/XuNHjSz281syMyGRkdHYxUbx8KmYQp3EUmxOOHeC0zUXRsHNqzwdW8D7l/qQXe/190H3X1wYGAgRhnxaF8ZEZF44Z4H+uqu9QGTS32Bmf0UsA14aPWlrY7CXUQkXrgfArJmdnnNtauB4SXaA7wdeNjd82dT3GpMFMqAwl1E0m3FcHf3KeBh4C4z6zGz64EbgQcatTezLuBXWWZKZi2Na0dIEZHYL2K6A+gCRoD9wF53Hzaz3WZWPzq/CTgJPN6sIs+EpmVERGKuc3f3MaLQrr/+JNEN19pr+4n+A0jEeKFEe8boatd2vyKSXsFtPzAxE209YGZJlyIikpjgwl2bhomIBBju2ldGRCTAcNeOkCIiAYb7hMJdRCS8cB8vlLTGXURSL6hwd3cmZrTdr4hIUOGeny1TmXOFu4ikXlDhPjGjfWVERCCwcB+f1tYDIiIQWrjPbxqmFzGJSMqFGe4auYtIygUV7hPaEVJEBAgt3OcPx+5WuItIugUV7uOFEmbQm9OLmEQk3YIL977OdtratN2viKRbcOGu+XYRkcDCXZuGiYhEggp3bRomIhIJLtw1chcRCS7ctSOkiAgEFu4TMzpiT0QEAgr3mVKFYnlO+8qIiBBQuI9r6wERkQUKdxGRAAUT7to0TETklGDCXSN3EZFTggt3rZYREQkw3DVyFxEJKNwnCtHh2H2d2n5ARCSYcB8vlOjtyJLNBPNHEhFZtVhJaGb9ZvaImU2Z2VEz27NM2+vM7Akzy5vZi2b23uaVu7RoL3eN2kVEAOKm4d1AETgfuAZ4zMwOuvtwbSMz2wp8AXgf8BCQAy5qWrXLiHaE1Hy7iAjEGLmbWQ9wM3Cnu+fd/SngUeC2Bs3fD3zR3f/G3WfdfdLdv9nckhubmNGOkCIi8+JMy1wBlN39UM21g8CuBm1/HBgzs6+Y2YiZfdbMtjd6UjO73cyGzGxodHT0zCuvo4M6REROiRPuvcBE3bVxYEODthcBbwfeC2wHngX2N3pSd7/X3QfdfXBgYCB+xUvQtIyIyClx5tzzQF/dtT5gskHbAvCIu38NwMw+BBw3s43uPn5Wla5AB3WIiJwSZ+R+CMia2eU1164Ghhu0/XfAaz73Bm2arlSZY7pYUbiLiFStGO7uPgU8DNxlZj1mdj1wI/BAg+YfA95iZteYWTtwJ/DUWo/atWmYiMhicV/xcwfQBYwQzaHvdfdhM9ttZvn5Ru7+JeB3gMeqbS8DllwT3yyn9pXROncREYi5zt3dx4CbGlx/kuiGa+21e4B7mlFcXNpXRkRksSBeq69wFxFZLIhwn5iJNg1TuIuIRIIId+3lLiKyWBDhPr9apq9T4S4iAoGE+3ihREe2jc72TNKliIi0hCDCXfvKiIgsFkS4a+sBEZHFggl33UwVETklmHDXyF1E5JQgwl0HdYiILBZEuI9PK9xFRGqt+3Cfm3MmZ8s6HFtEpMa6D/fJmTLuenWqiEitdR/uEzPaNExEpN66D3ftCCkicjqFu4hIgIIJd825i4icEky4a+QuInLKug93HY4tInK6dR/u44US2TajO6ftfkVE5gUR7n1d7ZhZ0qWIiLSMIMJdUzIiIout+3CfmClrpYyISJ11H+4auYuInG7dh/tEoaRNw0RE6qz7cNfIXUTkdOs63N1dh2OLiDSwrsN9ulihPOcKdxGROus63LWvjIhIY0GEu0buIiKLretw174yIiKNxQp3M+s3s0fMbMrMjprZniXa7TOzkpnla94ubW7Jp2jkLiLSWNwF4ncDReB84BrgMTM76O7DDdp+0t1/vUn1LWtLb45f2LWNgQ0d5+LbiYisGyuGu5n1ADcDr3L3PPCUmT0K3AZ8YI3rW9ZrLu7nNbf1J1mCiEhLijMtcwVQdvdDNdcOAruWaP/LZjZmZsNmtvesKxQRkTMWJ9x7gYm6a+PAhgZtPwW8AhgA3gX8rpn9WqMnNbPbzWzIzIZGR0fPoGQREVlJnHDPA3111/qAyfqG7v4f7v4Dd6+4+1eAPwX+S6Mndfd73X3Q3QcHBgbOtG4REVlGnHA/BGTN7PKaa1cDjW6m1nNAp2iIiJxjK4a7u08BDwN3mVmPmV0P3Ag8UN/WzG40s80W+THgN4HPNLtoERFZXtwXMd0BdAEjwH5gr7sPm9luM8vXtLsF+C7RlM0ngD909483s2AREVlZrHXu7j4G3NTg+pNEN1znP29481RERM6tdb39gIiINGbunnQNmNkocHSVX74VON7EcppJta1OK9cGrV2falud9Vrbxe7ecLlhS4T72TCzIXcfTLqORlTb6rRybdDa9am21QmxNk3LiIgESOEuIhKgEML93qQLWIZqW51Wrg1auz7VtjrB1bbu59xFROR0IYzcRUSkjsJdRCRACncRkQCt23CPe65rUszsy2Y2U3OW7LcTquM91X3zZ83s/rrHfs7MvmVm02b2uJld3Aq1mdkOM/O6s3jvPMe1dZjZfdWfrUkz+4aZ/WLN44n13XK1tUjfPWhmL5jZhJkdMrN31jyW9M9cw9paod9qary8mh0P1lzbU/37njKzT5vZykfQufu6fCPawOyTRHvb/BTRASK7kq6rpr4vA+9sgTreSrQv0D3A/TXXt1b77L8CncD/AZ5ukdp2EG0XnU2w33qAfdVa2oA3E22ItyPpvluhtlbou11AR/Xjq4AfAq9Jut9WqC3xfqup8Z+AJ4EHa2qeBH66mnd/C/zdSs8T94DsltLK57q2Gnd/GMDMBoGLah56KzDs7n9ffXwfcNzMrnL3byVcW+I82up6X82lfzSzZ4mCYAsJ9t0KtR1Y6++/EnevPevBq287iepL+mduqdpeOhfffyVmdgtwEvgKcFn18q3AZ939iWqbO4FvmtkGdz/t0KR563Va5kzPdU3KR8zsuJn9q5n9TNLF1NlF1GfAQmAcprX68KiZPW9mHzOzrUkWYmbnE/3cDdNifVdX27xE+87M/tLMpoFvAS8An6NF+m2J2uYl1m9m1gfcBby/7qH6fjsMFIn+zpe0XsP9TM51TcpvA5cCFxK9COGzZrYz2ZIW6SXqs1qt0ofHgR8FLiYa7W0A/iapYsysvfr9P14dYbZM3zWorSX6zt3vqH7v3USH/czSIv22RG2t0G8fBu5z9+frrq+q39ZruMc+1zUp7v5v7j7p7rMeHVjyr8Cbkq6rRsv2obvn3X3I3cvu/iLwHuCNZpZEeLYRnTpWrNYBLdJ3jWprpb7z6Czlp4im3PbSIv3WqLak+83MrgF+HviTBg+vqt/W5Zw7Nee6uvt3qtfinuualFY7T3YYePv8J9X7GDtpzT6cfxn1OR2MmJkB9wHnA29y91L1ocT7bpna6iXSd3WynOqfVvuZm6+t3rnut58huqn7XPRXSy+QMbNXAl8gyjcAzOxSoIMoB5eW9J3hs7ij/HdEK2Z6gOtpodUywCbgBqIVAVmiGyJTwBUJ1JKt1vERolHefE0D1T67uXrtDzn3KxeWqu21wJVE/7C2EK2KejyBvvso8DTQW3e9FfpuqdoS7TvgPKLjNnuBTPXfwRTwK0n32wq1Jd1v3cC2mrc/Bh6q9tkuomno3dW8e5AYq2XO2Q/jGnRGP/Dp6l/Oc8CepGuqqW0A+BrRr00nq/8I35BQLfs4tSpg/m1f9bGfJ7qpVCBaurmjFWoDfg14tvp3+wLRebzbznFtF1frmSH6tXj+7dak+2652pLuu+rP/r9Uf+4ngGeAd9U8nmS/LVlb0v3WoNZ9VJdCVj/fU825KeAzQP9Kz6GNw0REArReb6iKiMgyFO4iIgFSuIuIBEjhLiISIIW7iEiAFO4iIgFSuIuIBEjhLiISoP8EO6v1+DM7qlUAAAAASUVORK5CYII=%0A">
+<img src="data:image/png;base64,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%0A">
 </div>
 
 </div>
@@ -6419,7 +6498,7 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.983316957950592</pre>
+<pre>0.981844961643219</pre>
 </div>
 
 </div>
@@ -6501,9 +6580,9 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
   <tbody>
     <tr>
       <td>0</td>
-      <td>0.097349</td>
-      <td>0.016604</td>
-      <td>0.995093</td>
+      <td>0.078388</td>
+      <td>0.018007</td>
+      <td>0.994112</td>
       <td>00:14</td>
     </tr>
   </tbody>
