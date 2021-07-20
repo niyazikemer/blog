@@ -15,7 +15,7 @@ github_repo: "blog"
 # OPTIONAL: override baseurl and url if using a custom domain
 # Note: leave out the trailing / from this value. 
 #url: "https://niyazikemer.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-url: "https://niyazikemer.com
+url: "https://niyazikemer.com"
 
 
 ###########################################################
