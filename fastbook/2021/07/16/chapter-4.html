@@ -8,8 +8,8 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Chapter 4" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="FastBook Chapter 4 summary" />
-<meta property="og:description" content="FastBook Chapter 4 summary" />
+<meta name="description" content="FastBook Chapter 4 MNIST Basics. In this notebook I add some cells for utility fuctions. path, ls(), untar, !, tree usage, %config Completer.use_jedi = False is for disabling default autocompleter for jupyter. As usual I followed both Jeremy Howard’s Lesson and Weights and Biases reading group videos." />
+<meta property="og:description" content="FastBook Chapter 4 MNIST Basics. In this notebook I add some cells for utility fuctions. path, ls(), untar, !, tree usage, %config Completer.use_jedi = False is for disabling default autocompleter for jupyter. As usual I followed both Jeremy Howard’s Lesson and Weights and Biases reading group videos." />
 <link rel="canonical" href="https://niyazikemer.com/fastbook/2021/07/16/chapter-4.html" />
 <meta property="og:url" content="https://niyazikemer.com/fastbook/2021/07/16/chapter-4.html" />
 <meta property="og:site_name" content="Niyazi Kemer" />
@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-07-16T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2021-07-16T00:00:00-05:00","url":"https://niyazikemer.com/fastbook/2021/07/16/chapter-4.html","@type":"BlogPosting","image":"https://niyazikemer.com/images/magpie.png","headline":"Chapter 4","dateModified":"2021-07-16T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://niyazikemer.com/fastbook/2021/07/16/chapter-4.html"},"description":"FastBook Chapter 4 summary","@context":"https://schema.org"}</script>
+{"datePublished":"2021-07-16T00:00:00-05:00","url":"https://niyazikemer.com/fastbook/2021/07/16/chapter-4.html","@type":"BlogPosting","image":"https://niyazikemer.com/images/magpie.png","headline":"Chapter 4","dateModified":"2021-07-16T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://niyazikemer.com/fastbook/2021/07/16/chapter-4.html"},"description":"FastBook Chapter 4 MNIST Basics. In this notebook I add some cells for utility fuctions. path, ls(), untar, !, tree usage, %config Completer.use_jedi = False is for disabling default autocompleter for jupyter. As usual I followed both Jeremy Howard’s Lesson and Weights and Biases reading group videos.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://niyazikemer.com/feed.xml" title="Niyazi Kemer" /><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -72,13 +72,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Chapter 4</h1><p class="page-description">FastBook Chapter 4 summary</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-07-16T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Chapter 4</h1><p class="page-description">FastBook Chapter 4 MNIST Basics. In this notebook I add some cells for utility fuctions. `path`, `ls()`, `untar`, `!`, `tree` usage, `%config Completer.use_jedi = False` is for disabling default autocompleter for jupyter. As usual I followed both Jeremy Howard's Lesson and Weights and Biases reading group videos.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-07-16T00:00:00-05:00" itemprop="datePublished">
         Jul 16, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      18 min read
+      19 min read
     
 </span></p>
 
@@ -223,6 +223,46 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">fastbook</span>
+<span class="n">fastbook</span><span class="o">.</span><span class="n">setup_book</span><span class="p">()</span>
+<span class="c1"># below is for disabling Jedi autocomplete that doesn't work well.</span>
+<span class="o">%</span><span class="k">config</span> Completer.use_jedi = False
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fastai.vision.all</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">fastbook</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">'image'</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">'Greys'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -538,6 +578,23 @@ window.onload = wrap_img;
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Path</span><span class="o">.</span><span class="n">BASE_PATH</span> <span class="o">=</span> <span class="n">path</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -3395,6 +3452,23 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 </div>
     
 
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">orig_params</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -3790,6 +3864,23 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span> <span class="o">=</span> <span class="n">orig_params</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">.</span><span class="n">requires_grad_</span><span class="p">()</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -6439,6 +6530,313 @@ It is obvious that a_3 is closer to the perfect 3 so our approach worked at this
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>epoch</th>
+      <th>train_loss</th>
+      <th>valid_loss</th>
+      <th>batch_accuracy</th>
+      <th>time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0.303284</td>
+      <td>0.398378</td>
+      <td>0.511776</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0.142384</td>
+      <td>0.221517</td>
+      <td>0.817959</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0.079702</td>
+      <td>0.112610</td>
+      <td>0.917076</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0.052855</td>
+      <td>0.076474</td>
+      <td>0.942100</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0.040301</td>
+      <td>0.059791</td>
+      <td>0.958783</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>0.033824</td>
+      <td>0.050389</td>
+      <td>0.964181</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>0.030075</td>
+      <td>0.044483</td>
+      <td>0.966143</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>0.027629</td>
+      <td>0.040465</td>
+      <td>0.966634</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>0.025865</td>
+      <td>0.037553</td>
+      <td>0.969578</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>0.024499</td>
+      <td>0.035336</td>
+      <td>0.971541</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>0.023391</td>
+      <td>0.033579</td>
+      <td>0.972522</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>0.022467</td>
+      <td>0.032142</td>
+      <td>0.973994</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>0.021679</td>
+      <td>0.030936</td>
+      <td>0.973994</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>0.020997</td>
+      <td>0.029901</td>
+      <td>0.974975</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>0.020398</td>
+      <td>0.028998</td>
+      <td>0.974975</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>0.019869</td>
+      <td>0.028198</td>
+      <td>0.975957</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>0.019395</td>
+      <td>0.027484</td>
+      <td>0.976448</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>0.018966</td>
+      <td>0.026841</td>
+      <td>0.976938</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>0.018577</td>
+      <td>0.026259</td>
+      <td>0.977429</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>0.018220</td>
+      <td>0.025730</td>
+      <td>0.977429</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>0.017892</td>
+      <td>0.025244</td>
+      <td>0.978410</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>0.017588</td>
+      <td>0.024799</td>
+      <td>0.979882</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>0.017306</td>
+      <td>0.024388</td>
+      <td>0.979882</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>0.017042</td>
+      <td>0.024008</td>
+      <td>0.980373</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>0.016794</td>
+      <td>0.023656</td>
+      <td>0.980864</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>0.016561</td>
+      <td>0.023328</td>
+      <td>0.980864</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>0.016341</td>
+      <td>0.023022</td>
+      <td>0.980864</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>0.016133</td>
+      <td>0.022737</td>
+      <td>0.981845</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>0.015935</td>
+      <td>0.022470</td>
+      <td>0.981845</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>0.015746</td>
+      <td>0.022221</td>
+      <td>0.981845</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>0.015566</td>
+      <td>0.021988</td>
+      <td>0.982336</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>0.015395</td>
+      <td>0.021769</td>
+      <td>0.982336</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>0.015231</td>
+      <td>0.021565</td>
+      <td>0.982826</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>0.015076</td>
+      <td>0.021371</td>
+      <td>0.982826</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>0.014925</td>
+      <td>0.021190</td>
+      <td>0.982826</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>0.014782</td>
+      <td>0.021018</td>
+      <td>0.982826</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>0.014643</td>
+      <td>0.020856</td>
+      <td>0.982826</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>0.014510</td>
+      <td>0.020703</td>
+      <td>0.982826</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td>0.014382</td>
+      <td>0.020558</td>
+      <td>0.982826</td>
+      <td>00:00</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td>0.014258</td>
+      <td>0.020420</td>
+      <td>0.982826</td>
+      <td>00:00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+
 </div>
 </div>
 
