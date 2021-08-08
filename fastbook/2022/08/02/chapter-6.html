@@ -117,29 +117,34 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h1"><a href="#Other-Computer-Vision-Problems">Other Computer Vision Problems </a>
-<ul>
 <li class="toc-entry toc-h2"><a href="#Multi-Label-Classification">Multi-Label Classification </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#The-Data">The Data </a></li>
-<li class="toc-entry toc-h3"><a href="#Sidebar:-Pandas-and-DataFrames">Sidebar: Pandas and DataFrames </a></li>
-<li class="toc-entry toc-h3"><a href="#Constructing-a-DataBlock">Constructing a DataBlock </a></li>
+<li class="toc-entry toc-h3"><a href="#The-Dataset">The Dataset </a></li>
+<li class="toc-entry toc-h3"><a href="#Pandas-and-DataFrames">Pandas and DataFrames </a></li>
+<li class="toc-entry toc-h3"><a href="#Constructing-a-DataBlock">Constructing a DataBlock </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Dataset-and-Dataloader">Dataset and Dataloader </a></li>
+<li class="toc-entry toc-h4"><a href="#Dataset(s)-and-Dataloader(s)">Dataset(s) and Dataloader(s) </a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h3"><a href="#What-is-DataBlock">What is DataBlock </a></li>
-<li class="toc-entry toc-h3"><a href="#Binary-Cross-Entropy">Binary Cross-Entropy </a></li>
+<li class="toc-entry toc-h3"><a href="#Binary-Cross-Entropy">Binary Cross-Entropy </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#What-is-partial-function">What is partial function </a></li>
+<li class="toc-entry toc-h4"><a href="#How-to-find-right-threshold?">How to find right threshold? </a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#Regression">Regression </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Assemble-the-Data">Assemble the Data </a></li>
-<li class="toc-entry toc-h3"><a href="#Training-a-Model">Training a Model </a></li>
+<li class="toc-entry toc-h3"><a href="#Training-the-Model">Training the Model </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#Conclusion">Conclusion </a></li>
 <li class="toc-entry toc-h2"><a href="#Questionnaire">Questionnaire </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Further-Research">Further Research </a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul><!--
@@ -155,7 +160,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="/images/copied_from_nb/images/chapter-06/fastbook.jpeg" alt="">
-My <code>Deep Learning for Coders with fastai &amp; PyTorch</code> has arrived. It is very good for taking notes on it directly. (Some chapters are slightly different from notebook versions)</p>
+My <code>Deep Learning for Coders with fastai &amp; PyTorch</code> has arrived. It is very good for taking notes on it directly. (Some chapters are slightly different from the notebook version)</p>
 
 </div>
 </div>
@@ -199,15 +204,6 @@ My <code>Deep Learning for Coders with fastai &amp; PyTorch</code> has arrived. 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Other-Computer-Vision-Problems">
-<a class="anchor" href="#Other-Computer-Vision-Problems" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other Computer Vision Problems<a class="anchor-link" href="#Other-Computer-Vision-Problems"> </a>
-</h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Multi-Label-Classification">
 <a class="anchor" href="#Multi-Label-Classification" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multi-Label Classification<a class="anchor-link" href="#Multi-Label-Classification"> </a>
 </h2>
@@ -219,8 +215,8 @@ My <code>Deep Learning for Coders with fastai &amp; PyTorch</code> has arrived. 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="The-Data">
-<a class="anchor" href="#The-Data" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Data<a class="anchor-link" href="#The-Data"> </a>
+<h3 id="The-Dataset">
+<a class="anchor" href="#The-Dataset" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Dataset<a class="anchor-link" href="#The-Dataset"> </a>
 </h3>
 </div>
 </div>
@@ -347,8 +343,8 @@ My <code>Deep Learning for Coders with fastai &amp; PyTorch</code> has arrived. 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sidebar:-Pandas-and-DataFrames">
-<a class="anchor" href="#Sidebar:-Pandas-and-DataFrames" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sidebar: Pandas and DataFrames<a class="anchor-link" href="#Sidebar:-Pandas-and-DataFrames"> </a>
+<h3 id="Pandas-and-DataFrames">
+<a class="anchor" href="#Pandas-and-DataFrames" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pandas and DataFrames<a class="anchor-link" href="#Pandas-and-DataFrames"> </a>
 </h3>
 </div>
 </div>
@@ -687,6 +683,15 @@ Name: fname, Length: 5011, dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Dataset-and-Dataloader">
+<a class="anchor" href="#Dataset-and-Dataloader" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dataset and Dataloader<a class="anchor-link" href="#Dataset-and-Dataloader"> </a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>
 <code>Dataset</code>:: Anything in which index to it and you can take the length to it.</li>
@@ -892,6 +897,15 @@ Name: fname, Length: 5011, dtype: object</pre>
     <strong>Note: </strong>Short cut for zipping.*try to understand) It used for transposing (JH said in the lesson video, check it how)
 </div>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Dataset(s)-and-Dataloader(s)">
+<a class="anchor" href="#Dataset(s)-and-Dataloader(s)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dataset(s) and Dataloader(s)<a class="anchor-link" href="#Dataset(s)-and-Dataloader(s)"> </a>
+</h4>
 </div>
 </div>
 </div>
@@ -2026,6 +2040,15 @@ Name: fname, Length: 5011, dtype: object</pre>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="What-is-partial-function">
+<a class="anchor" href="#What-is-partial-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is <code>partial function</code><a class="anchor-link" href="#What-is-partial-function"> </a>
+</h4>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -2209,6 +2232,15 @@ Name: fname, Length: 5011, dtype: object</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="How-to-find-right-threshold?">
+<a class="anchor" href="#How-to-find-right-threshold?" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to find right threshold?<a class="anchor-link" href="#How-to-find-right-threshold?"> </a>
+</h4>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -2513,6 +2545,23 @@ Name: fname, Length: 5011, dtype: object</pre>
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Path</span><span class="o">.</span><span class="n">BASE_PATH</span> <span class="o">=</span> <span class="n">path</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -2948,8 +2997,8 @@ X = torch.linalg.solve(A, B) (Triggered internally at  /opt/conda/conda-bld/pyto
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Training-a-Model">
-<a class="anchor" href="#Training-a-Model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training a Model<a class="anchor-link" href="#Training-a-Model"> </a>
+<h3 id="Training-the-Model">
+<a class="anchor" href="#Training-the-Model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training the Model<a class="anchor-link" href="#Training-the-Model"> </a>
 </h3>
 </div>
 </div>
@@ -3303,15 +3352,6 @@ X = torch.linalg.solve(A, B) (Triggered internally at  /opt/conda/conda-bld/pyto
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Conclusion">
-<a class="anchor" href="#Conclusion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusion<a class="anchor-link" href="#Conclusion"> </a>
-</h2>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
