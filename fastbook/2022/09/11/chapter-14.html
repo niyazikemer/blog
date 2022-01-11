@@ -4,20 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Resnets | Niyazi Kemer</title>
+<title>Chapter 14 - Resnets | Niyazi Kemer</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Resnets" />
+<meta property="og:title" content="Chapter 14 - Resnets" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="wip" />
-<meta property="og:description" content="wip" />
-<link rel="canonical" href="https://niyazikemer.com/fastbook/2022/11/06/chapter-14.html" />
-<meta property="og:url" content="https://niyazikemer.com/fastbook/2022/11/06/chapter-14.html" />
+<meta name="description" content="Mainly original notebook. Some notes added." />
+<meta property="og:description" content="Mainly original notebook. Some notes added." />
+<link rel="canonical" href="https://niyazikemer.com/fastbook/2022/09/11/chapter-14.html" />
+<meta property="og:url" content="https://niyazikemer.com/fastbook/2022/09/11/chapter-14.html" />
 <meta property="og:site_name" content="Niyazi Kemer" />
-<meta property="og:image" content="https://niyazikemer.com/images/fastbook_images/chapter-14/dogo.jpg" />
+<meta property="og:image" content="https://niyazikemer.com/images/fastbook_images/chapter-14/resnetBlock.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-11-06T00:00:00-05:00" />
+<meta property="article:published_time" content="2022-09-11T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2022-11-06T00:00:00-05:00","url":"https://niyazikemer.com/fastbook/2022/11/06/chapter-14.html","@type":"BlogPosting","image":"https://niyazikemer.com/images/fastbook_images/chapter-14/dogo.jpg","headline":"Resnets","dateModified":"2022-11-06T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://niyazikemer.com/fastbook/2022/11/06/chapter-14.html"},"description":"wip","@context":"https://schema.org"}</script>
+{"datePublished":"2022-09-11T00:00:00-05:00","url":"https://niyazikemer.com/fastbook/2022/09/11/chapter-14.html","@type":"BlogPosting","image":"https://niyazikemer.com/images/fastbook_images/chapter-14/resnetBlock.png","headline":"Chapter 14 - Resnets","dateModified":"2022-09-11T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://niyazikemer.com/fastbook/2022/09/11/chapter-14.html"},"description":"Mainly original notebook. Some notes added.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://niyazikemer.com/feed.xml" title="Niyazi Kemer" /><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -72,8 +72,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Resnets</h1><p class="page-description">wip</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-11-06T00:00:00-05:00" itemprop="datePublished">
-        Nov 6, 2022
+    <h1 class="post-title p-name" itemprop="name headline">Chapter 14 - Resnets</h1><p class="page-description">Mainly original notebook. Some notes added.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-11T00:00:00-05:00" itemprop="datePublished">
+        Sep 11, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
@@ -96,19 +96,19 @@ window.onload = wrap_img;
         <div class="pb-5 d-flex flex-wrap flex-justify-end">
           <div class="px-2">
 
-    <a href="https://github.com/niyazikemer/blog/tree/master/_notebooks/2022-11-06-chapter-14.ipynb" role="button" target="_blank">
+    <a href="https://github.com/niyazikemer/blog/tree/master/_notebooks/2022-09-11-chapter-14.ipynb" role="button" target="_blank">
 <img class="notebook-badge-image" src="/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/niyazikemer/blog/master?filepath=_notebooks%2F2022-11-06-chapter-14.ipynb" target="_blank">
+    <a href="https://mybinder.org/v2/gh/niyazikemer/blog/master?filepath=_notebooks%2F2022-09-11-chapter-14.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/assets/badges/binder.svg" alt="Open In Binder"/>
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://colab.research.google.com/github/niyazikemer/blog/blob/master/_notebooks/2022-11-06-chapter-14.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/niyazikemer/blog/blob/master/_notebooks/2022-09-11-chapter-14.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
@@ -124,11 +124,19 @@ window.onload = wrap_img;
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/2022-11-06-chapter-14.ipynb
+# file to edit: _notebooks/2022-09-11-chapter-14.ipynb
 -->
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/images/copied_from_nb/images/chapter-14/resnetBlock.png" alt=""></p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1425,7 +1433,7 @@ Here's the definition of a simple ResNet block (where <code>norm_type=NormType.B
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/fastbook/2022/11/06/chapter-14.html" hidden></a>
+</script><a class="u-url" href="/fastbook/2022/09/11/chapter-14.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
